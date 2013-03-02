@@ -25,7 +25,7 @@
                     		BorderThickness="1">
                     		<TabPanel
                     			Margin="0,0,0,0"
-                    			IsItemsHost="True" />
+                    			IsItemsHost="True"/>
                     	</Border>
                         <Border
                             BorderBrush="{x:Null}"
@@ -67,6 +67,7 @@
                             <Setter TargetName="Border" 
                                     Property="BorderBrush" 
                                     Value="{StaticResource SelectedBorderBrush}"/>
+
                             <Setter TargetName="Border" 
                                 Property="Background" 
                                 Value="#FFE9EDDF" />
@@ -79,52 +80,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-   	<Style x:Key="ButtonFocusVisual">
-   		<Setter Property="Control.Template">
-   			<Setter.Value>
-   				<ControlTemplate>
-   					<Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
-   				</ControlTemplate>
-   			</Setter.Value>
-   		</Setter>
-   	</Style>
-   	<LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
-						<GradientStop Color="#FFEAF1DA" Offset="0"/>
-						<GradientStop Color="#FFEBEBEB"/>
-						<GradientStop Color="#FFCDD2C0" Offset="1"/>
-						<GradientStop Color="#FFE9EDDF" Offset="1"/>
-   	</LinearGradientBrush>
-   	<SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
-   	<Style x:Key="VocabularyTutorTopMenuButton" TargetType="{x:Type Button}">
-   		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
-   		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
-   		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
-   		<Setter Property="BorderThickness" Value="1"/>
-   		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-   		<Setter Property="HorizontalContentAlignment" Value="Center"/>
-   		<Setter Property="VerticalContentAlignment" Value="Center"/>
-   		<Setter Property="Padding" Value="1"/>
-   		<Setter Property="Template">
-   			<Setter.Value>
-   				<ControlTemplate TargetType="{x:Type Button}">
-   					<Microsoft_Windows_Themes:ButtonChrome x:Name="Chrome" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}" RenderDefaulted="{TemplateBinding IsDefaulted}" SnapsToDevicePixels="true">
-   						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-   					</Microsoft_Windows_Themes:ButtonChrome>
-   					<ControlTemplate.Triggers>
-   						<Trigger Property="IsKeyboardFocused" Value="true">
-   							<Setter Property="RenderDefaulted" TargetName="Chrome" Value="true"/>
-   						</Trigger>
-   						<Trigger Property="ToggleButton.IsChecked" Value="true">
-   							<Setter Property="RenderPressed" TargetName="Chrome" Value="true"/>
-   						</Trigger>
-   						<Trigger Property="IsEnabled" Value="false">
-   							<Setter Property="Foreground" Value="#ADADAD"/>
-   						</Trigger>
-   					</ControlTemplate.Triggers>
-   				</ControlTemplate>
-   			</Setter.Value>
-   		</Setter>
-   	</Style>
 </Window.Resources>
 	<Grid>
 		<Grid.RowDefinitions>
@@ -137,7 +92,7 @@
 		</Grid.ColumnDefinitions>
 		<Rectangle Grid.ColumnSpan="2" Grid.RowSpan="2" Fill="{StaticResource BackgroundBrush}" MouseDown="Rectangle_MouseDown" />
 		<TabControl x:Name="_menuTabControl" TabStripPlacement="Left" Grid.Row="1" Grid.ColumnSpan="2" Background="{x:Null}" d:LayoutOverrides="GridBox" MouseDown="_menuTabControl_MouseDown">
-			<TabItem x:Name="_tabItem1" Header="Пользователь" Foreground="#FF03B206" FontSize="29.333" FontFamily="Calibri" >
+			<TabItem x:Name="_tabItem1" Header="Пользователь" Foreground="{StaticResource BackgroundBrush}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus">
 				<Grid Name="UserSelectionGrid">
 					<Grid.RowDefinitions>
 						<RowDefinition Height="0.2*"/>
@@ -147,14 +102,14 @@
 						<RowDefinition Height="0.05*"/>
 					</Grid.RowDefinitions>
 					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="0.05*"/>
-						<ColumnDefinition Width="0.15*"/>
-						<ColumnDefinition Width="0.4*"/>
-						<ColumnDefinition Width="0.2*"/>
-						<ColumnDefinition Width="0.15*"/>
-						<ColumnDefinition Width="0.05*"/>
+						<ColumnDefinition Width="0.059*"/>
+						<ColumnDefinition Width="66.788"/>
+						<ColumnDefinition Width="0.471*"/>
+						<ColumnDefinition Width="0.235*"/>
+						<ColumnDefinition Width="0.176*"/>
+						<ColumnDefinition Width="0.059*"/>
 					</Grid.ColumnDefinitions>
-					<TextBlock  Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="Добро пожаловать, гость!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+					<TextBlock  Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="Добро пожаловать, гость!" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 					<Grid Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="1">
 						<Grid.RowDefinitions>
 							<RowDefinition Height="0.4*"/>
@@ -167,9 +122,9 @@
 						</Grid.ColumnDefinitions>
 						<TextBox Grid.Column="1" TextWrapping="Wrap" Text="UserName" FontSize="24" HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="Black"/>
 						<PasswordBox Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="stretch" VerticalAlignment="Center" Foreground="Black"/>
-						<TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Логин" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-						<TextBlock Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Пароль" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-						<CheckBox Content="Запомнить" Grid.Column="1" Grid.Row="2" FontSize="24" FlowDirection="RightToLeft" Foreground="#FF03B206"/>
+						<TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Логин" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
+						<TextBlock Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Пароль" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
+						<CheckBox Content="Запомнить" Grid.Column="1" Grid.Row="2" FontSize="24" FlowDirection="RightToLeft" Foreground="{StaticResource BackgroundBrush}"/>
 					</Grid>
 					<Button Content="Войти" Grid.Column="3" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2">
 						<Button.Foreground>
@@ -179,13 +134,13 @@
 					
 				</Grid>
 			</TabItem>
-			<TabItem x:Name="_tabItem2" Header="Словарь" Foreground="#FF03B206" FontSize="29.333" FontFamily="Calibri" Background="{x:Null}" >
+            <TabItem x:Name="_tabItem2" Header="Словарь" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" Background="{x:Null}" GotFocus="_tabItem_GotFocus">
 				<Grid />
 			</TabItem>
-			<TabItem x:Name="_tabItem3" Header="Тесты" Background="{x:Null}" Foreground="#FF03B206" FontSize="29.333" FontFamily="Calibri" >
+            <TabItem x:Name="_tabItem3" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus">
 				<Grid />
 			</TabItem>
-			<TabItem x:Name="_tabItem4" Header="Результаты" Background="{x:Null}" Foreground="#FF03B206" FontSize="29.333" FontFamily="Calibri">
+            <TabItem x:Name="_tabItem4" Header="Результаты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus">
 				<Grid />
 			</TabItem>
 		</TabControl>

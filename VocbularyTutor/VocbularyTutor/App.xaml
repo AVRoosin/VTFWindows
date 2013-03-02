@@ -35,7 +35,7 @@
             				<VisualState x:Name="Pressed">
             					<Storyboard>
             						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="ellipse">
-            							<EasingColorKeyFrame KeyTime="0" Value="#FF7ED03D"/>
+            							<EasingColorKeyFrame KeyTime="0" Value="#FFA1FF06"/>
             						</ColorAnimationUsingKeyFrames>
             					</Storyboard>
             				</VisualState>
@@ -47,7 +47,7 @@
             				<SolidColorBrush Color="#FF03B206" Opacity="100"/>
             			</Ellipse.Fill>
             		</Ellipse>
-            		<ContentPresenter Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            		<ContentPresenter  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             	</Grid>            
             </ControlTemplate>
         </Setter.Value>
@@ -82,6 +82,12 @@
      						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
      							<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
      						</DoubleAnimationUsingKeyFrames>
+     						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="rectangle">
+     							<EasingDoubleKeyFrame KeyTime="0" Value="1.1"/>
+     						</DoubleAnimationUsingKeyFrames>
+     						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="rectangle">
+     							<EasingDoubleKeyFrame KeyTime="0" Value="1.1"/>
+     						</DoubleAnimationUsingKeyFrames>
      					</Storyboard>
      				</VisualState>
      				<VisualState x:Name="Pressed">
@@ -97,9 +103,23 @@
      				<VisualState x:Name="Disabled"/>
      			</VisualStateGroup>
      		</VisualStateManager.VisualStateGroups>
-     		<Rectangle x:Name="rectangle" Fill="{StaticResource BackgroundBrush}" Margin="0" Opacity="100" Stroke="{x:Null}" StrokeThickness="3"/>
+     		<Rectangle x:Name="rectangle" Fill="{StaticResource BackgroundBrush}" Margin="0" Opacity="100" Stroke="{x:Null}" StrokeThickness="3" RenderTransformOrigin="0.5,0.5">
+     			<Rectangle.RenderTransform>
+     				<TransformGroup>
+     					<ScaleTransform/>
+     					<SkewTransform/>
+     					<RotateTransform/>
+     					<TranslateTransform/>
+     				</TransformGroup>
+     			</Rectangle.RenderTransform>
+     		</Rectangle>
      		<ContentPresenter Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/> 	
      	</Grid>
      </ControlTemplate>
-    </Application.Resources>
+     <Style x:Key="DefaultVTTextBlockStyle" TargetType="{x:Type TextBlock}">
+     	<Setter Property="TextWrapping" Value="NoWrap"/>
+     	<Setter Property="TextTrimming" Value="None"/>
+		<Setter Property="Foreground" Value="{StaticResource BackgroundBrush}"/>
+     </Style>
+     </Application.Resources>
 </Application>
