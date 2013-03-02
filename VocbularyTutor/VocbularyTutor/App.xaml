@@ -53,5 +53,51 @@
         </Setter.Value>
     </Setter>
 </Style>
+     <Style x:Key="ButtonFocusVisual">
+     	<Setter Property="Control.Template">
+     		<Setter.Value>
+     			<ControlTemplate>
+     				<Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+     			</ControlTemplate>
+     		</Setter.Value>
+     	</Setter>
+     </Style>
+     <LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+     	<GradientStop Color="#F3F3F3" Offset="0"/>
+     	<GradientStop Color="#EBEBEB" Offset="0.5"/>
+     	<GradientStop Color="#DDDDDD" Offset="0.5"/>
+     	<GradientStop Color="#CDCDCD" Offset="1"/>
+     </LinearGradientBrush>
+     <SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
+     <ControlTemplate x:Key="CommonButton" TargetType="{x:Type Button}">
+     	<Grid>
+     		<VisualStateManager.VisualStateGroups>
+     			<VisualStateGroup x:Name="CommonStates">
+     				<VisualState x:Name="Normal"/>
+     				<VisualState x:Name="MouseOver">
+     					<Storyboard>
+     						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+     							<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+     						</DoubleAnimationUsingKeyFrames>
+     					</Storyboard>
+     				</VisualState>
+     				<VisualState x:Name="Pressed">
+     					<Storyboard>
+     						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+     							<EasingColorKeyFrame KeyTime="0" Value="#FF7ED03D"/>
+     						</ColorAnimationUsingKeyFrames>
+     						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+     							<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+     						</DoubleAnimationUsingKeyFrames>
+     					</Storyboard>
+     				</VisualState>
+     				<VisualState x:Name="Disabled"/>
+     			</VisualStateGroup>
+     		</VisualStateManager.VisualStateGroups>
+     		<Rectangle x:Name="Border" Fill="{x:Null}" Margin="0" Opacity="100" Stroke="Black" StrokeThickness="3"/>
+     		<Rectangle x:Name="rectangle" Fill="#FF03B206" Margin="0" Opacity="0" Stroke="{x:Null}" StrokeThickness="3"/>
+     		<ContentPresenter Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/> 	
+     	</Grid>
+     </ControlTemplate>
     </Application.Resources>
 </Application>
