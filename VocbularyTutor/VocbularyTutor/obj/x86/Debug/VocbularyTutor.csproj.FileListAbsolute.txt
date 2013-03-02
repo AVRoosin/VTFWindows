@@ -1,0 +1,60 @@
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\bin\Debug\VocbularyTutor.exe
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\bin\Debug\VocbularyTutor.pdb
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\MainWindow.baml
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\SettingsWindow.baml
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\UserControl1.baml
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\App.baml
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\MainWindow.g.cs
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\SettingsWindow.g.cs
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\UserControl1.g.cs
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\App.g.cs
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor_MarkupCompile.cache
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.g.resources
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.Properties.Resources.resources
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.csproj.GenerateResource.Cache
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.exe
+D:\Document\Универ\ООП\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.pdb
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.exe
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.pdb
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\VocbularyTutor\VocbularyTutor\bin\Debug\VocbularyTutor.exe
+F:\VocbularyTutor\VocbularyTutor\bin\Debug\VocbularyTutor.pdb
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\MainWindow.baml
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\SettingsWindow.baml
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\App.baml
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\MainWindow.g.cs
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\SettingsWindow.g.cs
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\App.g.cs
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor_MarkupCompile.cache
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.g.resources
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.Properties.Resources.resources
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.exe
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.pdb
+G:\VocbularyTutor\VocbularyTutor\bin\Debug\VocbularyTutor.exe
+G:\VocbularyTutor\VocbularyTutor\bin\Debug\VocbularyTutor.pdb
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\MainWindow.baml
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\SettingsWindow.baml
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\App.baml
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\MainWindow.g.cs
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\SettingsWindow.g.cs
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\App.g.cs
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor_MarkupCompile.cache
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.g.resources
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.Properties.Resources.resources
+G:\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.csproj.GenerateResource.Cache
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\bin\Debug\VocbularyTutor.exe
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\bin\Debug\VocbularyTutor.pdb
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\MainWindow.baml
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\SettingsWindow.baml
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\App.baml
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\MainWindow.g.cs
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\SettingsWindow.g.cs
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\App.g.cs
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor_MarkupCompile.cache
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.g.resources
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.Properties.Resources.resources
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.csproj.GenerateResource.Cache
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.exe
+D:\Программирование\Новая папка\VocbularyTutor\VocbularyTutor\obj\x86\Debug\VocbularyTutor.pdb
