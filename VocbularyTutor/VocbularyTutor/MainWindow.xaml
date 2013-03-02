@@ -167,6 +167,6 @@
 				</Button.Content>
 			</Button>
 		</StackPanel>
-		<TextBlock TextWrapping="Wrap" Text="Welcome to Vocabulary Tutor!" Foreground="#FF6AD027" FontSize="37.333" TextAlignment="Center" FontFamily="Calibri"/>
+        <TextBlock Name="TopTextBlock" MouseDown="TopTextBlock_MouseDown"  TextWrapping="Wrap" Text="Welcome to Vocabulary Tutor!" Foreground="#FF6AD027" FontSize="37.333" TextAlignment="Center" FontFamily="Calibri"/>
 	</Grid>
 </Window>
