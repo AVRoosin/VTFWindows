@@ -135,8 +135,8 @@
 			<ColumnDefinition Width="0.775*"/>
 			<ColumnDefinition Width="0.225*"/>
 		</Grid.ColumnDefinitions>
-		<Rectangle Grid.ColumnSpan="2" Grid.RowSpan="2" Fill="#FF5B6D7C" MouseDown="Rectangle_MouseDown" />
-		<TabControl x:Name="_menuTabControl" TabStripPlacement="Left" Grid.Row="1" Grid.ColumnSpan="2" Background="{x:Null}" Opacity="0.8" d:LayoutOverrides="GridBox" MouseDown="_menuTabControl_MouseDown">
+		<Rectangle Grid.ColumnSpan="2" Grid.RowSpan="2" Fill="{StaticResource BackgroundBrush}" MouseDown="Rectangle_MouseDown" />
+		<TabControl x:Name="_menuTabControl" TabStripPlacement="Left" Grid.Row="1" Grid.ColumnSpan="2" Background="{x:Null}" d:LayoutOverrides="GridBox" MouseDown="_menuTabControl_MouseDown">
 			<TabItem x:Name="_tabItem1" Header="Пользователь" Foreground="#FF03B206" FontSize="29.333" FontFamily="Calibri" >
 				<Grid Name="UserSelectionGrid">
 					<Grid.RowDefinitions>
@@ -206,6 +206,6 @@
 				</Button.Content>
 			</Button>
 		</StackPanel>
-        <TextBlock Margin=" 0,10,0,0" Name="TopTextBlock" MouseDown="TopTextBlock_MouseDown"  TextWrapping="Wrap" Text="Welcome to Vocabulary Tutor!" Foreground="#FF7ED03D" FontSize="37.333" TextAlignment="Center" FontFamily="Calibri"/>
+        <TextBlock Margin=" 0,10,0,0" Name="TopTextBlock" MouseDown="TopTextBlock_MouseDown"  TextWrapping="Wrap" Text="Welcome to Vocabulary Tutor!" Foreground="#FFA1FF06" FontSize="37.333" TextAlignment="Center" FontFamily="Calibri"/>
 	</Grid>
 </Window>
