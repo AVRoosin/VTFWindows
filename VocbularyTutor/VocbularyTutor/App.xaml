@@ -72,6 +72,7 @@
      <SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
 	 <SolidColorBrush x:Key="TopTextColor" Color="#FFA1FF06"/>
 	 <SolidColorBrush x:Key="BackgroundBrush" Color="#FF586971"/>
+	 <SolidColorBrush x:Key="TabItemBackgroundBrush" Color="#FFE9EDDF"/>
      <ControlTemplate x:Key="CommonButton" TargetType="{x:Type Button}">
      	<Grid>
      		<VisualStateManager.VisualStateGroups>
