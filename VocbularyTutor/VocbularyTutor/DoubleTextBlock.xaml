@@ -1,0 +1,23 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="VocbularyTutor.DoubleTextBlock"
+	x:Name="UserControl"
+	d:DesignWidth="180" d:DesignHeight="35">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="30"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.58*"/>
+			<RowDefinition Height="0.42*"/>
+		</Grid.RowDefinitions>
+		<TextBlock Name="Main" Text="{Binding Path=MainText}" TextWrapping="Wrap" Foreground="{StaticResource BackgroundBrush}" FontSize="21.333" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0" Grid.ColumnSpan="2"/>
+		<TextBlock Name="Comment" Text="{Binding Path=CommentText}" Grid.Row="1" TextWrapping="Wrap" Grid.Column="1" Foreground="{StaticResource BackgroundBrush}" FontSize="13.333" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+	</Grid>
+</UserControl>

@@ -121,6 +121,7 @@
      	<Setter Property="TextWrapping" Value="NoWrap"/>
      	<Setter Property="TextTrimming" Value="None"/>
 		<Setter Property="Foreground" Value="{StaticResource BackgroundBrush}"/>
+		<Setter Property="FontSize" Value="24"/>
      </Style>
      </Application.Resources>
 </Application>
