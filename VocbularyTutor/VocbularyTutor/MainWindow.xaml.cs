@@ -22,9 +22,13 @@ namespace VocbularyTutor
         Color PassiveColor;
         Color ActiveColor;
 
+
         private void Window_Load(object sender, RoutedEventArgs e)
         {
             this._tabItem1.Focus();
+            this.translation1.MainText = "123123";
+            this.translation1.CommentText = "123123";
+            this.translation1.ToolTip = "123123";
         }
 
         public MainWindow()
