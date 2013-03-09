@@ -55,6 +55,26 @@ namespace VocbularyTutor
         {
             this.DragMove();
         }
+        private void AddTranslationButton_Click(object sender, RoutedEventArgs e)
+        {
+            var NTB = new DoubleTextBlock();
+            NTB.MainText = "Записан новый перевож";
+            NTB.CommentText = "Записан новый Комментарий к переводу";
+            TranslationLocation.Children.Add(NTB);
+            NTB.SetValue(Grid.RowProperty,1);
+            NTB.SetValue(Grid.ColumnProperty, 0);
+            var MinBut1 = new Button();
+            MinBut1.Style =(Style)Application.Current.Resources["DialogButtonStyle"];
+            TranslationLocation.Children.Add(MinBut1);
+            MinBut1.Height = 30;
+            MinBut1.Width = 30;
+            BitmapImage img = new BitmapImage(new Uri("Minus.png", UriKind.Relative));
+            MinBut1.Content = img;
+            MinBut1.SetValue(Grid.RowProperty, 1);
+            MinBut1.SetValue(Grid.ColumnProperty, 1);
+            this.AddTranslationTextBox.SetValue(Grid.RowProperty, 2);
+            this.AddTranslationButton.SetValue(Grid.RowProperty,2);
+        }
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;

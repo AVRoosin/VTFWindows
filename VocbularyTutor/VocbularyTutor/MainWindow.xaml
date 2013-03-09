@@ -4,82 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" xmlns:local="clr-namespace:VocbularyTutor" mc:Ignorable="d" x:Class="VocbularyTutor.MainWindow"
         Title="MainWindow" Height="480" Width="640" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" Loaded="Window_Load">
    <Window.Resources>
-    <LinearGradientBrush x:Key="SelectedBorderBrush" StartPoint="0,0" EndPoint="1,0">
-        <LinearGradientBrush.GradientStops>
-            <GradientStopCollection>
-                <GradientStop Color="Gray" Offset="0.965"/>
-                <GradientStop Color="WhiteSmoke" Offset="1.0"/>
-            </GradientStopCollection>
-  </LinearGradientBrush.GradientStops>
-    </LinearGradientBrush>
-    <Style TargetType="{x:Type TabControl}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TabControl}">
-                    <DockPanel>
-                    	<Border
-                    		Panel.ZIndex="50"
-                    		Margin="0,0,-1,0" 
-                    		Background="{x:Null}"
-                    		BorderBrush="{x:Null}"
-                    		BorderThickness="1">
-                    		<TabPanel
-                    			Margin="0,0,0,0"
-                    			IsItemsHost="True"/>
-                    	</Border>
-                        <Border
-                            BorderBrush="{x:Null}"
-                            BorderThickness="1"
-                            Background="#FFE9EDDF" >
-                            <ContentPresenter 
-                                ContentSource="SelectedContent" />
-                        </Border>
-                    </DockPanel>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style TargetType="{x:Type TabItem}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TabItem}">
-                    <Grid>
-                        <Border x:Name="Border" 
-                            Background="#FFAAAAAA"
-                            CornerRadius="7,0,0,0"
-                            BorderBrush="Gray"
-                            BorderThickness="0,0,0,0"
-                            Panel.ZIndex="50"
-                            Margin="0,0,0,0"
-                                >
 
-                            <ContentPresenter x:Name="ContentSite"             
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                ContentSource="Header"
-                                Margin="10,10,10,10"/>
-                        </Border>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Panel.ZIndex" Value="100" />
-                            <Setter Property="Margin" Value="0,0,-2,0" />
-                            <Setter TargetName="Border" 
-                                    Property="BorderBrush" 
-                                    Value="{StaticResource SelectedBorderBrush}"/>
-
-                            <Setter TargetName="Border" 
-                                Property="Background" 
-                                Value="#FFE9EDDF" />
-                            <Setter TargetName="Border" 
-                                Property="CornerRadius" 
-                                Value="0,0,0,0" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
 </Window.Resources>
 	<Grid>
 		<Grid.RowDefinitions>
@@ -120,8 +45,8 @@
 							<ColumnDefinition Width="0.3*"/>
 							<ColumnDefinition Width="0.7*"/>
 						</Grid.ColumnDefinitions>
-						<TextBox Grid.Column="1" TextWrapping="Wrap" Text="UserName" FontSize="24" HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="Black"/>
-						<PasswordBox Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="stretch" VerticalAlignment="Center" Foreground="Black"/>
+						<TextBox Grid.Column="1" TextWrapping="Wrap" Text="Имя Пользователя" FontSize="24" HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите имя пользователя"/>
+						<PasswordBox Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите пароль. чтобы войти"/>
 						<TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Логин" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 						<TextBlock Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Пароль" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 						<CheckBox Content="Запомнить" Grid.Column="1" Grid.Row="2" FontSize="24" FlowDirection="RightToLeft" Foreground="{StaticResource BackgroundBrush}"/>
@@ -168,7 +93,7 @@
 					    		<ColumnDefinition Width="50"/>
 					    	</Grid.ColumnDefinitions>
 					    	<TextBlock TextWrapping="NoWrap" Text="Русский" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
- 	<Grid Grid.RowSpan="2"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Stretch">
+ 	<Grid Name="TranslationLocation"  Grid.RowSpan="2"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Stretch">
  		<Grid.RowDefinitions>
  			<RowDefinition Height="40"/>
  			<RowDefinition Height="40"/>
@@ -184,7 +109,7 @@
  			<ColumnDefinition Width="0.787*"/>
  			<ColumnDefinition Width="50"/>
  		</Grid.ColumnDefinitions>
- 		<TextBox Grid.Row="2" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый перевод" FontSize="18"/>
+ 		<TextBox Name="AddTranslationTextBox" Grid.Row="1" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый перевод" FontSize="18"/>
  		<Button Height="30" Width="30"  Style="{StaticResource DialogButtonStyle}"  Grid.Column="1" Grid.Row="0">
  			<Image Source="Minus.png" RenderTransformOrigin="0.5,0.5">
  				<Image.RenderTransform>
@@ -194,25 +119,7 @@
  				</Image.RenderTransform>
  			</Image>  	
  		</Button>
- 		<Button Height="30" Width="30"  Style="{StaticResource DialogButtonStyle}"  Grid.Column="1" Grid.Row="1">
- 			<Image Source="Minus.png" RenderTransformOrigin="0.5,0.5">
- 				<Image.RenderTransform>
- 					<TransformGroup>
- 						<ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
- 					</TransformGroup>
- 				</Image.RenderTransform>
- 			</Image>  	
- 		</Button>		
- 		<Button Height="30" Width="30"  Style="{StaticResource DialogButtonStyle}"  Grid.Column="1" Grid.Row="2">
- 			<Image Source="Minus.png" RenderTransformOrigin="0.5,0.5">
- 				<Image.RenderTransform>
- 					<TransformGroup>
- 						<ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
- 					</TransformGroup>
- 				</Image.RenderTransform>
- 			</Image>  	
- 		</Button>
- 		<Button Height="30" Width="30"  Style="{StaticResource DialogButtonStyle}"  Grid.Column="1" Grid.Row="3">
+        <Button Name="AddTranslationButton"  Height="30" Width="30"  Style="{StaticResource DialogButtonStyle}"  Grid.Column="1" Grid.Row="1" Click="AddTranslationButton_Click">
  			<Image Source="Plus.png" RenderTransformOrigin="0.5,0.5">
  				<Image.RenderTransform>
  					<TransformGroup>
@@ -222,7 +129,6 @@
  			</Image>  	
  		</Button>
     <local:DoubleTextBlock x:Name="translation1"  Grid.Row="0" Grid.Column="0" MainText="Перевод1" CommentText="Сюда мы запишем комментарий" ToolTip="Сюда мы запишем комментарий"/>
-	<local:DoubleTextBlock Grid.Row="1" Grid.Column="0" MainText="Перевод2" CommentText="Сюда мы запишем комментарий" ToolTip="Сюда мы запишем комментарий"/>
  	</Grid>
 						</Grid>
 				</Grid>
