@@ -57,23 +57,34 @@ namespace VocbularyTutor
         }
         private void AddTranslationButton_Click(object sender, RoutedEventArgs e)
         {
+            if (AddTranslationTextBox.Text != "Новый перевод" && AddTranslationTextBox.Text != " " && AddTranslationTextBox.Text != "" && AddTranslationTextBox.Text!="Введите новый перевод!!!")
+        {
             var NTB = new DoubleTextBlock();
-            NTB.MainText = "Записан новый перевож";
-            NTB.CommentText = "Записан новый Комментарий к переводу";
+            NTB.MainText = AddTranslationTextBox.Text;
+            NTB.CommentText = AddTranslationTextBox.Text;
+            NTB.ToolTip = AddTranslationTextBox.Text;
             TranslationLocation.Children.Add(NTB);
-            NTB.SetValue(Grid.RowProperty,1);
+            NTB.SetValue(Grid.RowProperty, 1);
             NTB.SetValue(Grid.ColumnProperty, 0);
             var MinBut1 = new Button();
-            MinBut1.Style =(Style)Application.Current.Resources["DialogButtonStyle"];
+            MinBut1.Style = (Style) Application.Current.Resources["DialogButtonStyle"];
             TranslationLocation.Children.Add(MinBut1);
             MinBut1.Height = 30;
             MinBut1.Width = 30;
-            BitmapImage img = new BitmapImage(new Uri("Minus.png", UriKind.Relative));
+            Image img = new Image();
+            BitmapImage bimg = new BitmapImage(new Uri("Minus.png", UriKind.Relative));
+            img.Source = bimg;
             MinBut1.Content = img;
             MinBut1.SetValue(Grid.RowProperty, 1);
             MinBut1.SetValue(Grid.ColumnProperty, 1);
             this.AddTranslationTextBox.SetValue(Grid.RowProperty, 2);
-            this.AddTranslationButton.SetValue(Grid.RowProperty,2);
+            this.AddTranslationButton.SetValue(Grid.RowProperty, 2);
+            AddTranslationTextBox.Text = "Новый перевод";
+        }
+            else
+            {
+                AddTranslationTextBox.Text = "Введите новый перевод!!!";
+            }
         }
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
         {
@@ -95,6 +106,14 @@ namespace VocbularyTutor
             TabItem tab = new TabItem();
             tab = (TabItem)sender;
             tab.Foreground = new SolidColorBrush(ActiveColor);
+        }
+
+        private void TextBoxDblClick(object sender, RoutedEventArgs e)
+        {
+            TextBox tb=new TextBox();
+            tb = (TextBox) sender;
+            tb.SelectionStart = 0;
+            tb.SelectionLength = tb.Text.Length;
         }
     }
 }

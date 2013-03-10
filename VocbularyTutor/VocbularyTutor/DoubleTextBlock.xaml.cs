@@ -28,7 +28,7 @@ namespace VocbularyTutor
             set { SetValue(CommentTextProperty, value); }
         }
         public static readonly DependencyProperty CommentTextProperty = DependencyProperty.Register("CommentText", typeof(string), typeof(DoubleTextBlock), new UIPropertyMetadata(""));
-        public DoubleTextBlock()
+	    public DoubleTextBlock()
         {
             InitializeComponent();
             DataContext = this;
