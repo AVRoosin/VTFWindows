@@ -27,8 +27,8 @@ namespace VocbularyTutor
         {
             this._tabItem1.Focus();
             this.translation1.MainText = "123123";
-            this.translation1.CommentText = "123123";
-            this.translation1.ToolTip = "123123";
+            this.translation1.CommentText = "Сюда мы запишем новый комментарий и поглядим, как он отобразится";
+            this.translation1.ToolTip = "Сюда мы запишем новый комментарий и поглядим, как он отобразится";
         }
 
         public MainWindow()
@@ -59,33 +59,40 @@ namespace VocbularyTutor
         {
             if (AddTranslationTextBox.Text != "Новый перевод" && AddTranslationTextBox.Text != " " && AddTranslationTextBox.Text != "" && AddTranslationTextBox.Text!="Введите новый перевод!!!")
             {
-            RowDefinition NewRow=new RowDefinition();
-            var height = new GridLength(40);
-            int currentrownumber = Grid.GetRow((Button)sender);
-            TranslationLocation.RowDefinitions[currentrownumber+2].Height = height;
-            TranslationLocation.RowDefinitions.Add(NewRow);
-            var NTB = new DoubleTextBlock();
-            NTB.MainText = AddTranslationTextBox.Text;
-            NTB.CommentText = AddCommentTextBox.Text;
-            NTB.ToolTip = AddCommentTextBox.Text;
-            TranslationLocation.Children.Add(NTB);
-            NTB.SetValue(Grid.RowProperty, currentrownumber);
-            NTB.SetValue(Grid.ColumnProperty, 0);
-            var MinBut1 = new Button();
-            MinBut1.Style = (Style) Application.Current.Resources["DialogButtonStyle"];
-            TranslationLocation.Children.Add(MinBut1);
-            MinBut1.Height = 30;
-            MinBut1.Width = 30;
-            Image img = new Image();
-            BitmapImage bimg = new BitmapImage(new Uri("Minus.png", UriKind.Relative));
-            img.Source = bimg;
-            MinBut1.Content = img;
-            MinBut1.SetValue(Grid.RowProperty, currentrownumber);
-            MinBut1.SetValue(Grid.ColumnProperty, 1);
-            this.AddTranslationTextBox.SetValue(Grid.RowProperty, currentrownumber+1);
-            this.AddTranslationButton.SetValue(Grid.RowProperty, currentrownumber+1);
-            AddCommentTextBox.SetValue(Grid.RowProperty, currentrownumber+2);
-            AddTranslationTextBox.Text = "Новый перевод";
+                RowDefinition NewRow=new RowDefinition();
+                var height = new GridLength(35);
+                int currentrownumber = Grid.GetRow((Button)sender);
+                TranslationLocation.RowDefinitions[currentrownumber+2].Height = height;
+                TranslationLocation.RowDefinitions.Add(NewRow);
+                var NTB = new DoubleTextBlock();
+                NTB.MainText = AddTranslationTextBox.Text;
+                NTB.CommentText = AddCommentTextBox.Text;
+                    int i=20;
+                    while (NTB.ChangeCommentTextBlockLinesNumber(height.Value) && height.Value < 75)
+                    {
+                            height = new GridLength(35+i);
+                            TranslationLocation.RowDefinitions[currentrownumber].Height = height;
+                            i += 20;
+                    }
+                NTB.ToolTip = AddCommentTextBox.Text;
+                TranslationLocation.Children.Add(NTB);
+                NTB.SetValue(Grid.RowProperty, currentrownumber);
+                NTB.SetValue(Grid.ColumnProperty, 0);
+                var MinBut1 = new Button();
+                MinBut1.Style = (Style) Application.Current.Resources["DialogButtonStyle"];
+                TranslationLocation.Children.Add(MinBut1);
+                MinBut1.Height = 30;
+                MinBut1.Width = 30;
+                Image img = new Image();
+                BitmapImage bimg = new BitmapImage(new Uri("Minus.png", UriKind.Relative));
+                img.Source = bimg;
+                MinBut1.Content = img;
+                MinBut1.SetValue(Grid.RowProperty, currentrownumber);
+                MinBut1.SetValue(Grid.ColumnProperty, 1);
+                this.AddTranslationTextBox.SetValue(Grid.RowProperty, currentrownumber+1);
+                this.AddTranslationButton.SetValue(Grid.RowProperty, currentrownumber+1);
+                AddCommentTextBox.SetValue(Grid.RowProperty, currentrownumber+2);
+                AddTranslationTextBox.Text = "Новый перевод";
                 AddCommentTextBox.Text = "Новый коментарий";
             }
             else

@@ -22,16 +22,27 @@ namespace VocbularyTutor
         {get { return (string)GetValue(MainTextProperty); }
             set { SetValue(MainTextProperty, value); } }
         public static readonly DependencyProperty MainTextProperty = DependencyProperty.Register("MainText", typeof(string), typeof(DoubleTextBlock), new UIPropertyMetadata(""));
+        
         public string CommentText
         {
             get { return (string)GetValue(CommentTextProperty); }
             set { SetValue(CommentTextProperty, value); }
         }
         public static readonly DependencyProperty CommentTextProperty = DependencyProperty.Register("CommentText", typeof(string), typeof(DoubleTextBlock), new UIPropertyMetadata(""));
-	    public DoubleTextBlock()
+	    
+        public DoubleTextBlock()
         {
             InitializeComponent();
             DataContext = this;
+        }
+
+        private void Comment_Loaded(object sender, RoutedEventArgs e)
+        {
+            //ChangeCommentTextBlockLinesNumber();
+        }
+        public bool ChangeCommentTextBlockLinesNumber(double actualGridHeight)
+        {
+            return ((CommentText.Length -actualGridHeight+35) > 20);
         }
     }
 }

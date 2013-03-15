@@ -14,10 +14,10 @@
 			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="0.58*"/>
-			<RowDefinition Height="0.42*"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 		<TextBlock Name="Main" Text="{Binding Path=MainText}" TextWrapping="Wrap" Foreground="{StaticResource BackgroundBrush}" FontSize="21.333" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0" Grid.ColumnSpan="2"/>
-		<TextBlock Name="Comment" Text="{Binding Path=CommentText}" Grid.Row="1" TextWrapping="Wrap" Grid.Column="1" Foreground="{StaticResource BackgroundBrush}" FontSize="13.333" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+		<TextBlock Name="Comment" Text="{Binding Path=CommentText}" Grid.Row="1" TextWrapping="Wrap" Grid.Column="1" Foreground="{StaticResource BackgroundBrush}" FontSize="13.333" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Loaded="Comment_Loaded" />
 	</Grid>
 </UserControl>
