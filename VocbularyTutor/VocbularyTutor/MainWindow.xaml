@@ -17,7 +17,7 @@
 		</Grid.ColumnDefinitions>
         <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="2" Fill="{StaticResource BackgroundBrush}" MouseLeftButtonDown="Window_Drag" />
         <TabControl x:Name="_menuTabControl" TabStripPlacement="Left" Grid.Row="1" Grid.ColumnSpan="2" Background="{x:Null}" d:LayoutOverrides="GridBox" MouseLeftButtonDown="Window_Drag">
-            <TabItem x:Name="_tabItem1" Header="Пользователь" Foreground="{StaticResource BackgroundBrush}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+            <TabItem x:Name="UsersTabItem" Header="Пользователь" Foreground="{StaticResource BackgroundBrush}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
 				<Grid x:Name="UserSelectionGrid">
 					<Grid.RowDefinitions>
 						<RowDefinition Height="0.2*"/>
@@ -27,15 +27,16 @@
 						<RowDefinition Height="0.05*"/>
 					</Grid.RowDefinitions>
 					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="0.059*"/>
-						<ColumnDefinition Width="66.788"/>
-						<ColumnDefinition Width="0.471*"/>
-						<ColumnDefinition Width="0.235*"/>
-						<ColumnDefinition Width="0.176*"/>
-						<ColumnDefinition Width="0.059*"/>
+						<ColumnDefinition Width="0.06*"/>
+						<ColumnDefinition Width="0.14*"/>
+						<ColumnDefinition Width="0.2*"/>
+						<ColumnDefinition Width="0.2*"/>
+						<ColumnDefinition Width="0.2*"/>
+						<ColumnDefinition Width="0.14*"/>
+						<ColumnDefinition Width="0.06*"/>
 					</Grid.ColumnDefinitions>
 					<TextBlock  Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="Добро пожаловать, гость!" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
-					<Grid Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="1">
+					<Grid Name="LoginGrid" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="1">
 						<Grid.RowDefinitions>
 							<RowDefinition Height="0.4*"/>
 							<RowDefinition Height="0.4*"/>
@@ -45,17 +46,17 @@
 							<ColumnDefinition Width="0.3*"/>
 							<ColumnDefinition Width="0.7*"/>
 						</Grid.ColumnDefinitions>
-						<TextBox MouseDoubleClick="TextBoxDblClick"  Grid.Column="1" TextWrapping="Wrap" Text="Имя Пользователя" FontSize="24" HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите имя пользователя"/>
+						<ComboBox Name="StoredLoginComboBox" Grid.Column="1" Text="Имя Пользователя" FontSize="24" HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите имя пользователя"/>
 						<PasswordBox Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите пароль. чтобы войти"/>
 						<TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Логин" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 						<TextBlock Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Пароль" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 						<CheckBox Content="Запомнить" Grid.Column="1" Grid.Row="2" FontSize="24" FlowDirection="RightToLeft" Foreground="{StaticResource BackgroundBrush}"/>
 					</Grid>
-					<Button Content="Войти" Grid.Column="3" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}"/>
-					
+					<Button Content="Войти" Grid.Column="4" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}"/>
+					<Button Content="Новый" Grid.Column="1" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}" Click="NewUserCreation"/>
 				</Grid>
 			</TabItem>
-            <TabItem x:Name="_tabItem2" Header="Словарь" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" Background="{x:Null}" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+            <TabItem x:Name="DictionaryTabItem" Header="Словарь" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" Background="{x:Null}" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
 				<Grid >
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="*" MinWidth="150"/>
@@ -129,10 +130,13 @@
 						</Grid>
 				</Grid>
 			</TabItem>
-            <TabItem x:Name="_tabItem3" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+            <TabItem x:Name="TestsTabItem" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
 				<Grid />
 			</TabItem>
-            <TabItem x:Name="_tabItem4" Header="Результаты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+            <TabItem x:Name="ResultsTabItem" Header="Результаты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+				<Grid />
+			</TabItem>
+			<TabItem x:Name="_AchievementsTabItem" Header="Достижения" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
 				<Grid />
 			</TabItem>
 		</TabControl>

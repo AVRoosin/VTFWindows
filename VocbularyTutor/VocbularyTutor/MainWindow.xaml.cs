@@ -25,7 +25,7 @@ namespace VocbularyTutor
 
         private void Window_Load(object sender, RoutedEventArgs e)
         {
-            this._tabItem1.Focus();
+            this.UsersTabItem.Focus();
             this.translation1.MainText = "123123";
             this.translation1.CommentText = "Сюда мы запишем новый комментарий и поглядим, как он отобразится";
             this.translation1.ToolTip = "Сюда мы запишем новый комментарий и поглядим, как он отобразится";
@@ -59,6 +59,8 @@ namespace VocbularyTutor
         {
             if (AddTranslationTextBox.Text != "Новый перевод" && AddTranslationTextBox.Text != " " && AddTranslationTextBox.Text != "" && AddTranslationTextBox.Text!="Введите новый перевод!!!")
             {
+                //LoginGrid.Children.Remove(LoginTextBox);
+
                 RowDefinition NewRow=new RowDefinition();
                 var height = new GridLength(35);
                 int currentrownumber = Grid.GetRow((Button)sender);
@@ -128,6 +130,20 @@ namespace VocbularyTutor
             tb = (TextBox) sender;
             tb.SelectionStart = 0;
             tb.SelectionLength = tb.Text.Length;
+        }
+
+        private void NewUserCreation(object sender, RoutedEventArgs e)
+        {
+            LoginGrid.Children.Remove(StoredLoginComboBox);
+            TextBox LoginTextBox =new TextBox();
+            LoginTextBox.Text = "Имя пользователя";
+            LoginGrid.Children.Add(LoginTextBox);
+            LoginTextBox.SetValue(Grid.ColumnProperty,1);
+            LoginTextBox.SetValue(Grid.RowProperty, 0);
+            LoginTextBox.FontSize=24;
+            LoginTextBox.TextWrapping = TextWrapping.Wrap;
+            LoginTextBox.HorizontalAlignment = HorizontalAlignment.Stretch;
+            LoginTextBox.VerticalAlignment = VerticalAlignment.Center;
         }
     }
 }
