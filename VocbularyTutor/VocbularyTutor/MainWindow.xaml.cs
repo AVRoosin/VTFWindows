@@ -106,6 +106,10 @@ namespace VocbularyTutor
         {
             this.WindowState = WindowState.Minimized;
         }
+		 private void MaximizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Maximized;
+        }
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
             SettingsWindow sw = new SettingsWindow();
