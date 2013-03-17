@@ -131,6 +131,31 @@
 				</Grid>
 			</TabItem>
             <TabItem x:Name="TestsTabItem" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+				<Grid Name="TestsPanelMainGrid">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="0.05*"/>
+						<RowDefinition Height="0.15*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="0.05*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="0.05*"/>
+						<ColumnDefinition Width="0.6*"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="0.05*"/>
+					</Grid.ColumnDefinitions>
+					<StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+						<ComboBox ToolTip="Выберите тест" Margin="8,8,8,0"></ComboBox>
+						<Button Content="Запустить" Margin="8" Name="StratTestButton" Template="{DynamicResource CommonButton}" Foreground="{StaticResource TabItemBackgroundBrush}"/>
+					</StackPanel>
+					<TextBlock Grid.Column="2" Margin="8" Grid.Row="1" TextWrapping="Wrap" Text="Описание теста:" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
+					<TextBlock Grid.Column="2" Margin="8" Grid.Row="2" TextWrapping="Wrap" Text="Собстственно, само описание пихаем сюда" Style="{DynamicResource DefaultVTTextBlockStyle}" FontStyle="Italic"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="TestsTabItem1" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+				<Grid />
+			</TabItem>
+			<TabItem x:Name="TestsTabItem2" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
 				<Grid />
 			</TabItem>
             <TabItem x:Name="ResultsTabItem" Header="Результаты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
