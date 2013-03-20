@@ -21,11 +21,14 @@ namespace VocbularyTutor
     {
         Color PassiveColor;
         Color ActiveColor;
-
+        private Authorisation auth;
 
         private void Window_Load(object sender, RoutedEventArgs e)
         {
+            UnableTabItems();
             this.UsersTabItem.Focus();
+            auth=new Authorisation();
+            this.StoredLoginComboBox.ItemsSource = auth.GetUsersList();
             this.translation1.MainText =    "MainText";
             this.translation1.CommentText = "Сюда мы запишем новый комментарий и поглядим, как он отобразится";
             this.translation1.ToolTip =     "Сюда мы запишем новый комментарий и поглядим, как он отобразится";
@@ -160,8 +163,9 @@ namespace VocbularyTutor
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-            if (Authorisation.Authorise() == AuthorisationResult.Success)
+            if (Authorisation.Authorise() == AuthorisationResult.Success || auth.CheckPassword(StoredLoginComboBox.Items.CurrentItem.ToString(), PasswordTextBox.Password))
             {
+                EnableTabItems();
                 //Success!
             }
             else
@@ -178,6 +182,27 @@ namespace VocbularyTutor
         public string GetPassword()
         {
             return PasswordTextBox.Password;
+        }
+
+        private void EnableTabItems()
+        {
+            this.DictionaryTabItem.IsEnabled = true;
+            this.ResultsTabItem.IsEnabled = true;
+            this._AchievementsTabItem.IsEnabled = true;
+            this.TestsTabItem.IsEnabled = true;
+            this.TestsTabItem1.IsEnabled = true;
+            this.TestsTabItem2.IsEnabled = true;
+            
+        }
+        private void UnableTabItems()
+        {
+            this.DictionaryTabItem.IsEnabled = false;
+            this.ResultsTabItem.IsEnabled = false;
+            this._AchievementsTabItem.IsEnabled = false;
+            this.TestsTabItem.IsEnabled = false;
+            this.TestsTabItem1.IsEnabled = false;
+            this.TestsTabItem2.IsEnabled = false;
+
         }
     }
 }
