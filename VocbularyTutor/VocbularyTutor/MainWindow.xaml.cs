@@ -136,7 +136,7 @@ namespace VocbularyTutor
             tab.Foreground = new SolidColorBrush(ActiveColor);
         }
 
-        private void TextBoxDblClick(object sender, RoutedEventArgs e)
+        private void textBox_DoubleClick(object sender, RoutedEventArgs e)
         {
             TextBox tb = new TextBox();
             tb = (TextBox) sender;
