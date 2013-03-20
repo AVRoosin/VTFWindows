@@ -1,0 +1,202 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" xmlns:local="clr-namespace:VocbularyTutor" xmlns:ec="http://schemas.microsoft.com/expression/2010/controls" mc:Ignorable="d" x:Class="VocbularyTutor.MainWindow"
+        Title="MainWindow" Height="480" Width="640" WindowStyle="None" MinHeight="480" MinWidth="500" Background="{x:Null}" Loaded="Window_Load">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="AUto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0.7*"/>
+			<ColumnDefinition Width="0.3*"/>
+		</Grid.ColumnDefinitions>
+		<Rectangle Grid.ColumnSpan="2" Grid.RowSpan="2" Fill="{StaticResource BackgroundBrush}" MouseLeftButtonDown="Window_Drag" />
+		<TabControl x:Name="_menuTabControl" TabStripPlacement="Left" Grid.Row="1" Grid.ColumnSpan="2" Background="{x:Null}" d:LayoutOverrides="GridBox" MouseLeftButtonDown="Window_Drag">
+			<TabItem x:Name="UsersTabItem" Header="Пользователь" Foreground="{StaticResource BackgroundBrush}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
+				<Grid x:Name="UserSelectionGrid">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="0.2*"/>
+						<RowDefinition Height="0.35*"/>
+						<RowDefinition Height="0.3*"/>
+						<RowDefinition Height="0.1*"/>
+						<RowDefinition Height="0.05*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="0.06*"/>
+						<ColumnDefinition Width="0.14*"/>
+						<ColumnDefinition Width="0.2*"/>
+						<ColumnDefinition Width="0.2*"/>
+						<ColumnDefinition Width="0.2*"/>
+						<ColumnDefinition Width="0.14*"/>
+						<ColumnDefinition Width="0.06*"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock  Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="Добро пожаловать, гость!" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
+					<Grid x:Name="LoginGrid" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="1">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="0.4*"/>
+							<RowDefinition Height="0.4*"/>
+							<RowDefinition Height="0.2*"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="0.3*"/>
+							<ColumnDefinition Width="0.7*"/>
+						</Grid.ColumnDefinitions>
+						<ComboBox x:Name="StoredLoginComboBox" Grid.Column="1" Text="Имя Пользователя" FontSize="24" HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите имя пользователя"/>
+						<PasswordBox Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите пароль. чтобы войти"/>
+						<TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Логин" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
+						<TextBlock Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Пароль" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
+						<CheckBox Content="Запомнить" Grid.Column="1" Grid.Row="2" FontSize="24" FlowDirection="RightToLeft" Foreground="{StaticResource BackgroundBrush}"/>
+					</Grid>
+					<Button Content="Войти" Grid.Column="4" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}"/>
+					<Button Content="Новый" Grid.Column="1" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}" Click="NewUserButton_Click"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="DictionaryTabItem" Header="Словарь" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" Background="{x:Null}" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
+				<Grid >
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" MinWidth="150"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*" MinWidth="150"/>
+					</Grid.ColumnDefinitions>
+					<GridSplitter HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.Column="1" ResizeBehavior="PreviousAndNext" Width="3" Background="{StaticResource BackgroundBrush}"/>
+					<Grid Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="0.095*"/>
+							<RowDefinition Height="0.096*"/>
+							<RowDefinition Height="0.676*"/>
+							<RowDefinition Height="0.133*"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="50"/>
+						</Grid.ColumnDefinitions>
+						<TextBlock TextWrapping="NoWrap" Text="Английский" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
+						<TextBox MouseDoubleClick="TextBoxDblClick" Margin="8,4,0,4" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Найти слово..." HorizontalAlignment="Stretch" FontSize="24" />
+						<Button Grid.Column="1" Height="30" Width="30" Grid.Row="1"  Style="{StaticResource DialogButtonStyle}">
+							<Image Margin="0,1" Source="Loopa.png"/>  	
+						</Button>
+						<ListBox Margin="8" Grid.Row="2" Grid.ColumnSpan="2"/>
+						<Button Content="Добавить" Margin="8" Grid.Row="3" Grid.ColumnSpan="2" Template="{DynamicResource CommonButton}" Foreground="{StaticResource TabItemBackgroundBrush}"/>
+					</Grid>
+					<Grid Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="0.095*"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="0.809*"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="50"/>
+						</Grid.ColumnDefinitions>
+						<TextBlock TextWrapping="NoWrap" Text="Русский" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
+						<Grid x:Name="TranslationLocation"  Grid.RowSpan="2"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Stretch">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="40"/>
+								<RowDefinition Height="40"/>
+								<RowDefinition Height="40"/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="0.787*"/>
+								<ColumnDefinition Width="50"/>
+							</Grid.ColumnDefinitions>
+							<TextBox MouseDoubleClick="TextBoxDblClick" x:Name="AddTranslationTextBox" Grid.Row="1" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый перевод" FontSize="18"/>
+							<TextBox MouseDoubleClick="TextBoxDblClick" x:Name="AddCommentTextBox" Grid.Row="2" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый комментарий" FontSize="18"/>
+							<Button Height="30" Width="30"  Style="{StaticResource DialogButtonStyle}"  Grid.Column="1" Grid.Row="0">
+								<Image Source="Minus.png" RenderTransformOrigin="0.5,0.5">
+									<Image.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+										</TransformGroup>
+									</Image.RenderTransform>
+								</Image>  	
+							</Button>
+							<Button x:Name="AddTranslationButton"  Height="30" Width="30"  Style="{StaticResource DialogButtonStyle}"  Grid.Column="1" Grid.Row="1" Click="AddTranslationButton_Click">
+								<Image Source="Plus.png" RenderTransformOrigin="0.5,0.5">
+									<Image.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+										</TransformGroup>
+									</Image.RenderTransform>
+								</Image>  	
+							</Button>
+							<local:DoubleTextBlock x:Name="translation1"  Grid.Row="0" Grid.Column="0" MainText="Перевод1" CommentText="Сюда мы запишем комментарий" ToolTip="Сюда мы запишем комментарий"/>
+						</Grid>
+					</Grid>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="TestsTabItem" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
+				<Grid x:Name="TestsPanelMainGrid">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="0.05*"/>
+						<RowDefinition Height="0.15*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="0.05*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="0.05*"/>
+						<ColumnDefinition Width="0.6*"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="0.05*"/>
+					</Grid.ColumnDefinitions>
+					<StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+						<ComboBox ToolTip="Выберите тест" Margin="8,8,8,0"/>
+						<Button Content="Запустить" Margin="8" x:Name="StratTestButton" Template="{DynamicResource CommonButton}" Foreground="{StaticResource TabItemBackgroundBrush}"/>
+					</StackPanel>
+					<TextBlock Grid.Column="2" Margin="8" Grid.Row="1" TextWrapping="Wrap" Text="Описание теста:" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
+					<TextBlock Grid.Column="2" Margin="8" Grid.Row="2" TextWrapping="Wrap" Text="Собстственно, само описание пихаем сюда" Style="{DynamicResource DefaultVTTextBlockStyle}" FontStyle="Italic"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="TestsTabItem1" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
+				<Grid >
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="0.3*"/>
+						<ColumnDefinition Width="0.3*"/>
+						<ColumnDefinition Width="0.3*"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="0.2*"/>
+						<RowDefinition Height="0.2*"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="0.05*"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="0.05*"/>
+						<RowDefinition Height="0.467*"/>
+					</Grid.RowDefinitions>
+					<TextBlock Grid.ColumnSpan="3" Grid.Row="6" TextWrapping="Wrap" Text="Сюда записывается описание теста, т.е. что должен сделать юзер. Ещё можно выводить сообщение об ошибке" Margin="8" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
+					<TextBlock Margin="8" TextWrapping="Wrap" Text="Тесты №1,3,5 От 17.03.2013 - ## слов" Style="{DynamicResource DefaultVTTextBlockStyle}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
+					<TextBlock Margin="8" TextWrapping="Wrap" Text="Word" Style="{DynamicResource DefaultVTTextBlockStyle}" Grid.Row="2" Grid.Column="0"/>
+					<TextBlock Margin="8" TextWrapping="Wrap" Text="Перевод" Style="{DynamicResource DefaultVTTextBlockStyle}" Grid.Row="2" Grid.Column="2"/>
+					<TextBox Grid.Column="1" Grid.Row="2"/>
+					<Button Grid.Column="2" Grid.Row="4" Content="Ответить" Margin="8" x:Name="MakeAnswerButton" Template="{DynamicResource CommonButton}" Foreground="{StaticResource TabItemBackgroundBrush}"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="TestsTabItem2" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
+				<Grid />
+			</TabItem>
+			<TabItem x:Name="ResultsTabItem" Header="Результаты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
+				<Grid />
+			</TabItem>
+			<TabItem x:Name="_AchievementsTabItem" Header="Достижения" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
+				<Grid />
+			</TabItem>
+		</TabControl>
+		<StackPanel x:Name="MenuButtonsStackPanel" Grid.Column="1" Grid.Row="0" Orientation="Horizontal" FlowDirection="righttoleft">
+			<Button x:Name="ExitButton"  HorizontalAlignment="Right" Height="36" Width="36"  Style="{StaticResource DialogButtonStyle}" Click="ExitButton_Click" Margin="8,0,0,0">
+				<Image Source="Exit.png"/>
+			</Button>
+			<Button x:Name="MaximizeButton"  HorizontalAlignment="Right" Height="36" Width="36" Style="{StaticResource DialogButtonStyle}" Click="MaximizeButton_Click" Margin="8,0,0,0">
+				<Image Source="Max.png"/>
+			</Button>
+			<Button x:Name="MinimizeButton"  HorizontalAlignment="Right" Height="36" Width="36" Style="{StaticResource DialogButtonStyle}" Click="MinimizeButton_Click" Margin="8,0,0,0">
+				<Image Source="Min.png"/>
+			</Button>
+			<Button x:Name="SettingsButton" HorizontalAlignment="Right" Height="36" Width="36"  Style="{StaticResource DialogButtonStyle}" Click="SettingsButton_Click" Margin="8,0,0,0">
+				<Image Source="cogwheel-3.png"/>
+			</Button>
+		</StackPanel>
+		<TextBlock Margin=" 0,8,0,8" x:Name="TopTextBlock" MouseLeftButtonDown="Window_Drag"  TextWrapping="Wrap" Text="VocabularyTutor" Foreground="#FFA1FF06" FontSize="37.333" TextAlignment="Center" FontFamily="Calibri"/>
+	</Grid>
+</Window>
