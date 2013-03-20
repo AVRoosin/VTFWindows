@@ -17,7 +17,11 @@ namespace VocbularyTutor
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
+<<<<<<< HEAD
     public partial class MainWindow : Window,IAuthorisationProvider
+=======
+    public partial class MainWindow : Window
+>>>>>>> def41f0... Поправил код, переименовал переменные и функции
     {
         Color PassiveColor;
         Color ActiveColor;
@@ -136,7 +140,11 @@ namespace VocbularyTutor
             tab.Foreground = new SolidColorBrush(ActiveColor);
         }
 
+<<<<<<< HEAD
         private void textBox_DoubleClick(object sender, RoutedEventArgs e)
+=======
+        private void TextBoxDblClick(object sender, RoutedEventArgs e)
+>>>>>>> def41f0... Поправил код, переименовал переменные и функции
         {
             TextBox tb = new TextBox();
             tb = (TextBox) sender;
@@ -157,6 +165,7 @@ namespace VocbularyTutor
             LoginTextBox.HorizontalAlignment = HorizontalAlignment.Stretch;
             LoginTextBox.VerticalAlignment   = VerticalAlignment.Center;
         }
+<<<<<<< HEAD
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
@@ -179,5 +188,7 @@ namespace VocbularyTutor
         {
             return PasswordTextBox.Password;
         }
+=======
+>>>>>>> def41f0... Поправил код, переименовал переменные и функции
     }
 }

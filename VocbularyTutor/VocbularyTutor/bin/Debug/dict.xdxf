@@ -1,0 +1,2232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xdxf SYSTEM "http://downloads.sourceforge.net/project/xdxf/xdxf_lousy.dtd?r=http%3A%2F%2Fsourceforge.net%">
+<xdxf lang_from="RUS" lang_to="ENG" format="visual">
+<full_name>Русско-английский словарь идиом</full_name>
+<description>This file was converted from the original database on:
+          Sat Sep 18 20:18:55 2004
+
+The original data is available from:
+     http://www.lingvo.ru/upload//contents/336/idioms.zip
+
+The scripts for conversion are in {00-database-script}.
+
+Русско-английский словарь идиомв научной лексике.1993-1999 гг.
+
+Словарь составлен на основе опыта работы с англоязычной научной
+литературой и общения с редакторами журналов.
+
+В него включены выражения которые, которые мне показались достаточно
+общеупотребительными (около 700 статей). Надеюсь, он поможет начинающим
+в написаниии статей и ведении деловой переписки.
+
+Словарь составлялся в первую очередь &quot;под себя&quot;, поэтому, возможно,
+содержит небольшие опечатки.
+
+В.И. Селедцов (Институт Клинической Иммунологии г. Новосибирск)    Below are scripts for building .index/.dict files.
+    Extract them using the following command:
+    mimencode -ub | gunzip | tar x
+
+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
+s/03Fb2wvQBQAAA=
+Source url: http://www.lingvo.ru/upload//contents/336/idioms.zip</description>
+<ar><k>а что дальше</k>
+а что дальше?
+        what next?</ar>
+<ar><k>без какихлибо условий</k>
+без каких-либо условий
+        without any strings attached</ar>
+<ar><k>безальтернативный</k>
+безальтернативный
+        having no alternative</ar>
+<ar><k>безусловно</k>
+безусловно
+        without question</ar>
+<ar><k>бесполезно</k>
+бесполезно
+        no earthly use</ar>
+<ar><k>бесполезный</k>
+бесполезный
+        of no avail</ar>
+<ar><k>бесспорно</k>
+бесспорно
+        and no mistake; without question</ar>
+<ar><k>благодарить за</k>
+благодарить за
+        thank for
+ we thank you for</ar>
+<ar><k>благодаря</k>
+благодаря
+        owing to</ar>
+<ar><k>близиться к концу</k>
+близиться к концу
+        draw to an end</ar>
+<ar><k>больной вопрос</k>
+больной вопрос
+        vexed question</ar>
+<ar><k>большей частью</k>
+большей частью
+        in the main; for the most part; as often as not</ar>
+<ar><k>борьба на равных</k>
+борьба на равных
+        ding-dong fight</ar>
+<ar><k>будущее</k>
+будущее
+        days to come</ar>
+<ar><k>было бы необходимо</k>
+было бы необходимо
+        It would be necessary</ar>
+<ar><k>было бы неплохо</k>
+было бы неплохо
+        It wouldn't be such a bad idea if...
+ I wouldn't mind it at all/in the least if...</ar>
+<ar><k>было бы хорошо</k>
+было бы хорошо
+        It would be a good thing if...
+ I'd appreciate it, if...</ar>
+<ar><k>быть бесспорным</k>
+быть бесспорным
+        go without saying</ar>
+<ar><k>быть в заблуждении</k>
+быть в заблуждении
+        labour under a delusion (or mistake)</ar>
+<ar><k>быть в печати</k>
+быть в печати
+        be in the press</ar>
+<ar><k>быть вынужденным</k>
+быть вынужденным
+        under the necessity of</ar>
+<ar><k>быть вынужденным выбирать из двух зол</k>
+быть вынужденным выбирать из двух зол
+        be on the horns of a dilemma</ar>
+<ar><k>быть диаметрально противоположным</k>
+быть диаметрально противоположным
+        be poles apart</ar>
+<ar><k>быть категорически против</k>
+быть категорически против
+        (чего-либо) set against</ar>
+<ar><k>быть на пути к</k>
+быть на пути к
+        (чему-либо) be in a fair way to</ar>
+<ar><k>быть надежным в работе</k>
+быть надежным в работе
+        be reliable in operation</ar>
+<ar><k>быть обоюдоострым</k>
+быть обоюдоострым
+        cut both ways</ar>
+<ar><k>быть ответственным</k>
+быть ответственным
+        (за что-либо) be accountable for</ar>
+<ar><k>в большинстве случаев</k>
+в большинстве случаев
+        as often as not</ar>
+<ar><k>в большом масштабе</k>
+в большом масштабе
+        in large</ar>
+<ar><k>в высшей степени</k>
+в высшей степени
+        up to the nines</ar>
+<ar><k>в данную минуту</k>
+в данную минуту
+        at the moment</ar>
+<ar><k>в действительности</k>
+в действительности
+        in fact; in reality</ar>
+<ar><k>в дополнение к вышеуказанному</k>
+в дополнение к вышеуказанному
+        further to the above
+ (in addition to the above)</ar>
+<ar><k>в дополнение к моему письму от</k>
+в дополнение к моему письму от
+        further to my letter of</ar>
+<ar><k>в заключение</k>
+в заключение
+        in fine</ar>
+<ar><k>в заключение мне хотелось бы сказать</k>
+в заключение мне хотелось бы сказать
+        In conclusion I'd like to say that...</ar>
+<ar><k>в известном смысле</k>
+в известном смысле
+        in a way</ar>
+<ar><k>в итоге</k>
+в итоге
+        in all</ar>
+<ar><k>в конечном счете</k>
+в конечном счете
+        in the end</ar>
+<ar><k>в контакте с</k>
+в контакте с
+        in touch with</ar>
+<ar><k>в конце концов</k>
+в конце концов
+        in the end; at long last</ar>
+<ar><k>в лучшем случае</k>
+в лучшем случае
+        at best</ar>
+<ar><k>в любом случае</k>
+в любом случае
+        in any events</ar>
+<ar><k>в небольшом масштабе</k>
+в небольшом масштабе
+        in a small way</ar>
+<ar><k>в недоумении</k>
+в недоумении
+        at a loss</ar>
+<ar><k>в некотором смысле</k>
+в некотором смысле
+        in a manner</ar>
+<ar><k>в определенной степени</k>
+в определенной степени
+        to a certain extent</ar>
+<ar><k>в основном</k>
+в основном
+        in the main</ar>
+<ar><k>в ответ на ваше письмо от</k>
+в ответ на ваше письмо от
+        in reply (response) to your letter of</ar>
+<ar><k>в первую очередь</k>
+в первую очередь
+        first of all
+ (in the first place)</ar>
+<ar><k>в перспективе</k>
+в перспективе
+        in prospect</ar>
+<ar><k>в поисках</k>
+в поисках
+        in quest of</ar>
+<ar><k>в полной боевой готовности</k>
+в полной боевой готовности
+        up in arms</ar>
+<ar><k>в пределах досягаемости</k>
+в пределах досягаемости
+        within reach</ar>
+<ar><k>в пределах разумного</k>
+в пределах разумного
+        within reasonable bounds</ar>
+<ar><k>в природе</k>
+в природе
+        in nature</ar>
+<ar><k>в природе вещей</k>
+в природе вещей
+        in the nature of things</ar>
+<ar><k>в процессе</k>
+в процессе
+        in the act</ar>
+<ar><k>в разумных пределах</k>
+в разумных пределах
+        in (or within) reason</ar>
+<ar><k>в растерянности</k>
+в растерянности
+        at a loss</ar>
+<ar><k>в результате</k>
+в результате
+        in the train of</ar>
+<ar><k>в самое ближайшее время</k>
+в самое ближайшее время
+        one of these days</ar>
+<ar><k>в самом деле</k>
+в самом деле
+        really and truly</ar>
+<ar><k>в свете</k>
+в свете
+        (чего-либо) in the light of</ar>
+<ar><k>в связи с</k>
+в связи с
+        in connection with</ar>
+<ar><k>в связи с этим</k>
+в связи с этим
+        In this connection</ar>
+<ar><k>в силу</k>
+в силу
+        (чего-либо) by (or in) virtue of</ar>
+<ar><k>в совершенстве</k>
+в совершенстве
+        up to the nines</ar>
+<ar><k>в совокупности</k>
+в совокупности
+        as a whole</ar>
+<ar><k>в соответствии</k>
+в соответствии
+        in keeping with</ar>
+<ar><k>в сочетании с</k>
+в сочетании с
+        in conjunction with</ar>
+<ar><k>в сравнении с</k>
+в сравнении с
+        in comparison with</ar>
+<ar><k>в сущности</k>
+в сущности
+        in effect</ar>
+<ar><k>в счет</k>
+в счет
+        (чего-либо) on account</ar>
+<ar><k>в таком случае</k>
+в таком случае
+        if so</ar>
+<ar><k>в теории</k>
+в теории
+        on paper</ar>
+<ar><k>в худшем случае</k>
+в худшем случае
+        at the worst</ar>
+<ar><k>в целом</k>
+в целом
+        as a whole</ar>
+<ar><k>в этих условиях</k>
+в этих условиях
+        in (or under) the circumstances</ar>
+<ar><k>в этой связи</k>
+в этой связи
+        in this connection</ar>
+<ar><k>ваше содействие в будет весьма ценным</k>
+ваше содействие в... будет весьма ценным
+        your cooperation in... will be greatly appreciated</ar>
+<ar><k>ввиду вышеизложенного</k>
+ввиду вышеизложенного
+        in view of the above (said)</ar>
+<ar><k>взаимовыгодный</k>
+взаимовыгодный
+        mutually beneficial</ar>
+<ar><k>взвесить все обстоятельства</k>
+взвесить все обстоятельства
+        count the cost</ar>
+<ar><k>взять верх</k>
+взять верх
+        come over</ar>
+<ar><k>взять на себя руководство</k>
+взять на себя руководство
+        lead the way</ar>
+<ar><k>вместе с тем</k>
+вместе с тем
+        at once</ar>
+<ar><k>вместо</k>
+вместо
+        in lieu of</ar>
+<ar><k>вне всяких вопросов</k>
+вне всяких вопросов
+        without question</ar>
+<ar><k>вне пределов досягаемости</k>
+вне пределов досягаемости
+        out of reach</ar>
+<ar><k>во всеоружии</k>
+во всеоружии
+        armed at all points</ar>
+<ar><k>во всех отношениях</k>
+во всех отношениях
+        all ends up; to all intents and purposes; at all points;
+ in all respects; in every respect</ar>
+<ar><k>во всяком случае</k>
+во всяком случае
+        at all events; at any rate</ar>
+<ar><k>во избежании задержки в</k>
+во избежании задержки в
+        to avoid delay in</ar>
+<ar><k>вовремя</k>
+вовремя
+        in season</ar>
+<ar><k>вовторых</k>
+во-вторых
+        in the second place</ar>
+<ar><k>возникнуть</k>
+возникнуть
+        come into existence</ar>
+<ar><k>воля случая</k>
+воля случая
+        long arm of coincidence</ar>
+<ar><k>вообще</k>
+вообще
+        at all</ar>
+<ar><k>вопервых</k>
+во-первых
+        in the first place</ar>
+<ar><k>вопреки ожиданию</k>
+вопреки ожиданию
+        contrary to expectation</ar>
+<ar><k>вопрос жизни и смерти</k>
+вопрос жизни и смерти
+        a matter of life and death</ar>
+<ar><k>воспользоваться благоприятным случаем</k>
+воспользоваться благоприятным случаем
+        take the occasion to</ar>
+<ar><k>вполне естественно</k>
+вполне естественно
+        no wonder</ar>
+<ar><k>впредь</k>
+впредь
+        from now on</ar>
+<ar><k>время от времени</k>
+время от времени
+        now and again</ar>
+<ar><k>все без исключения</k>
+все без исключения
+        all and sundry</ar>
+<ar><k>все время</k>
+все время
+        all the time</ar>
+<ar><k>все до одного</k>
+все до одного
+        every last</ar>
+<ar><k>все же</k>
+все же
+        none the less</ar>
+<ar><k>все как раз наоборот</k>
+все как раз наоборот
+        It's just the other way round</ar>
+<ar><k>все равно</k>
+все равно
+        all one, all the same</ar>
+<ar><k>все равно что</k>
+все равно что
+        as good as</ar>
+<ar><k>все хорошо в свое время</k>
+все хорошо в свое время
+        everything is good in its season</ar>
+<ar><k>всетаки</k>
+все-таки
+        none the less</ar>
+<ar><k>вследствие</k>
+вследствие
+        on account of; in the train of; owing to</ar>
+<ar><k>всякого рода</k>
+всякого рода
+        all manner of</ar>
+<ar><k>всякому овощу свое время</k>
+всякому овощу свое время
+        everything is good in its season</ar>
+<ar><k>вы далее пишите</k>
+вы далее пишите
+        further you write</ar>
+<ar><k>вы действительно полагаете что</k>
+вы действительно полагаете, что
+        Do you really mean that...</ar>
+<ar><k>вы как раз в этом и не правы</k>
+вы как раз в этом и не правы
+        That's where you're wrong, I'm afraid</ar>
+<ar><k>вы можете знать что</k>
+вы можете знать что
+        you may know that</ar>
+<ar><k>вы можете не соглашаться со мной но</k>
+вы можете не соглашаться со мной, но
+        You are free to disagree with me but...</ar>
+<ar><k>вы несомненно осведомлены что</k>
+вы, несомненно, осведомлены, что
+        you are no doubt aware that</ar>
+<ar><k>вы ошибаетесь</k>
+вы ошибаетесь
+        You're mistaken</ar>
+<ar><k>вы правы</k>
+вы правы
+        You're right
+ That,s right</ar>
+<ar><k>выдвигать</k>
+выдвигать
+        (предложение) bring forward</ar>
+<ar><k>вызвать удивление</k>
+вызвать удивление
+        cause surprise</ar>
+<ar><k>вызывающий сомнение</k>
+вызывающий сомнение
+        in question</ar>
+<ar><k>выполнять свое назначение</k>
+выполнять свое назначение
+        serve its turn; serve its purpose</ar>
+<ar><k>вырезать</k>
+вырезать
+        cut out</ar>
+<ar><k>выступать в качестве</k>
+выступать в качестве
+        appear for</ar>
+<ar><k>выявлять</k>
+выявлять
+        bring out</ar>
+<ar><k>выяснить</k>
+выяснить
+        clear up; study out</ar>
+<ar><k>гармонировать с</k>
+гармонировать с
+        (чем-либо) chime in with</ar>
+<ar><k>главная опора</k>
+главная опора
+        backbone</ar>
+<ar><k>главный козырь</k>
+главный козырь
+        the ace of trumps</ar>
+<ar><k>главным образом</k>
+главным образом
+        in the main; for the most part; as often as not</ar>
+<ar><k>говоря без преувеличений</k>
+говоря без преувеличений
+        to say the least of it</ar>
+<ar><k>гораздо</k>
+гораздо
+        by a long chalk; by long chalks</ar>
+<ar><k>господствовать</k>
+господствовать
+        be in the ascendant</ar>
+<ar><k>готовый к борьбе</k>
+готовый к борьбе
+        up in arms</ar>
+<ar><k>давать пример</k>
+давать пример
+        set an example</ar>
+<ar><k>давно</k>
+давно
+        long ago</ar>
+<ar><k>далеко не</k>
+далеко не
+        a long way off</ar>
+<ar><k>далеко не так как</k>
+далеко не так как
+        nothing like as</ar>
+<ar><k>данные подробные</k>
+данные подробные
+        particular data (particulars)</ar>
+<ar><k>данный о котором идет речь</k>
+данный, о котором идет речь
+        in question</ar>
+<ar><k>дать возможность</k>
+дать возможность
+        (чему-либо) give rein to</ar>
+<ar><k>дать волю</k>
+дать волю
+        (воображению) give rein to</ar>
+<ar><k>дать результат</k>
+дать результат
+        (желаемый) take effect</ar>
+<ar><k>действительно</k>
+действительно
+        really and truly</ar>
+<ar><k>действовать в соответствии с</k>
+действовать в соответствии с
+        act up to</ar>
+<ar><k>делать поспешный вывод</k>
+делать поспешный вывод
+        jump to a conclusion</ar>
+<ar><k>делать успехи</k>
+делать успехи
+        make headway</ar>
+<ar><k>дело будущего</k>
+дело будущего
+        in the lap of the future</ar>
+<ar><k>дело в том что</k>
+дело в том, что
+        the matter is (the point is)</ar>
+<ar><k>для данного случая</k>
+для данного случая
+        for the nonce</ar>
+<ar><k>для того чтобы</k>
+для того, чтобы
+        so as to</ar>
+<ar><k>для того чтобы избежать задержки в</k>
+для того чтобы избежать задержки в
+        to avoid delay in</ar>
+<ar><k>до некоторой степени</k>
+до некоторой степени
+        in a manner</ar>
+<ar><k>до самого конца</k>
+до самого конца
+        to the bitter end</ar>
+<ar><k>до сих пор</k>
+до сих пор
+        as yet</ar>
+<ar><k>довольно долго</k>
+довольно долго
+        quite a while</ar>
+<ar><k>довольствоваться</k>
+довольствоваться
+        make do with</ar>
+<ar><k>доказательство косвенное</k>
+доказательство косвенное
+        circumstantial evidence</ar>
+<ar><k>едва</k>
+едва
+        by a narrow margin</ar>
+<ar><k>если бы не</k>
+если бы не
+        but for</ar>
+<ar><k>если вам понадобится дополнительная информация пожалуйста свяжитесь</k>
+если Вам понадобится дополнительная информация, пожалуйста, свяжитесь
+        should you require any further information, please feel free to
+ contact me</ar>
+<ar><k>естественно</k>
+естественно
+        as a matter of course</ar>
+<ar><k>есть шансы</k>
+есть шансы
+        the chances are</ar>
+<ar><k>еще столько же</k>
+еще столько же
+        as much again</ar>
+<ar><k>желать</k>
+желать
+        wish for</ar>
+<ar><k>животрепещущий вопрос</k>
+животрепещущий вопрос
+        burning question</ar>
+<ar><k>жизненная необходимость</k>
+жизненная необходимость
+        breath of life</ar>
+<ar><k>завершить</k>
+завершить
+        bring to a close</ar>
+<ar><k>загадывать далеко вперед</k>
+загадывать далеко вперед
+        take a long shot</ar>
+<ar><k>задавать тон</k>
+задавать тон
+        set the pace</ar>
+<ar><k>запасной</k>
+запасной
+        spare</ar>
+<ar><k>зарекомендовать себя хорошо</k>
+зарекомендовать себя хорошо
+        give good account of oneself</ar>
+<ar><k>затем</k>
+затем
+        in the next place</ar>
+<ar><k>затянувшийся</k>
+затянувшийся
+        long-drawn</ar>
+<ar><k>здесь не все ясно</k>
+здесь не все ясно
+        there is more in it than meets the eye</ar>
+<ar><k>знать досконально</k>
+знать досконально
+        know the ropes</ar>
+<ar><k>золотая середина</k>
+золотая середина
+        golden mean</ar>
+<ar><k>и неудивительно</k>
+и неудивительно
+        no wonder</ar>
+<ar><k>и тому подобное</k>
+и тому подобное
+        and the like</ar>
+<ar><k>идти в печать</k>
+идти в печать
+        go to press</ar>
+<ar><k>идти во главе</k>
+идти во главе
+        lead the way</ar>
+<ar><k>идти впереди</k>
+идти впереди
+        go ahead</ar>
+<ar><k>идти вразрез с</k>
+идти вразрез с
+        (чем-либо) run counter to</ar>
+<ar><k>идти по ложному пути</k>
+идти по ложному пути
+        be (or get) on a false (or wrong) scent</ar>
+<ar><k>идти против</k>
+идти против
+        (чего-либо) run counter to</ar>
+<ar><k>извлекать выгоду</k>
+извлекать выгоду
+        turn to good account</ar>
+<ar><k>или чтонибудь вроде этого</k>
+или что-нибудь вроде этого
+        or so</ar>
+<ar><k>именно здесь</k>
+именно здесь
+        just at that spot</ar>
+<ar><k>иметь в виду</k>
+иметь в виду
+        have in mind</ar>
+<ar><k>иметь достаточный опыт квалификацию и возможности</k>
+иметь достаточный опыт, квалификацию и возможности
+        have sufficient experience, competence and facilities</ar>
+<ar><k>иметь преимущество</k>
+иметь преимущество
+        have the advantage of</ar>
+<ar><k>иметь ряд преимуществ</k>
+иметь ряд преимуществ
+        have a number of advantages</ar>
+<ar><k>иметь шанс</k>
+иметь шанс
+        stand a chance</ar>
+<ar><k>иначе</k>
+иначе
+        to the contrary</ar>
+<ar><k>интуитивно</k>
+интуитивно
+        by the light of nature</ar>
+<ar><k>исключительный</k>
+исключительный
+        more than ordinary</ar>
+<ar><k>использовать все возможности</k>
+использовать все возможности
+        leave no avenue unexplored (or explore every avenue)</ar>
+<ar><k>использовать наилучшим образом</k>
+использовать наилучшим образом
+        make the most of</ar>
+<ar><k>использовать наилучшим способом</k>
+использовать наилучшим способом
+        (что-либо) make the best of</ar>
+<ar><k>испытывать затруднения</k>
+испытывать затруднения
+        have much ado</ar>
+<ar><k>истолковать превратно</k>
+истолковать превратно
+        put a false construction on</ar>
+<ar><k>к моему удивлению</k>
+к моему удивлению
+        to my surprise</ar>
+<ar><k>к несчастью</k>
+к несчастью
+        worse luck</ar>
+<ar><k>к слову сказать</k>
+к слову сказать
+        by the way</ar>
+<ar><k>как будто</k>
+как будто
+        as if, as though</ar>
+<ar><k>как бы ни</k>
+как бы ни
+        never so</ar>
+<ar><k>как вы просили</k>
+как вы просили
+        as requested by you</ar>
+<ar><k>как говорится</k>
+как говорится
+        as the saying is; as they say</ar>
+<ar><k>как знать</k>
+как знать
+        there is no saying</ar>
+<ar><k>как и следовало ожидать</k>
+как и следовало ожидать
+        as a matter of course</ar>
+<ar><k>как ни странно</k>
+как ни странно
+        oddly enough</ar>
+<ar><k>как правило</k>
+как правило
+        as a matter of course</ar>
+<ar><k>как только</k>
+как только
+        as soon as; so soon as</ar>
+<ar><k>какнибудь</k>
+как-нибудь
+        after a manner</ar>
+<ar><k>капля в море</k>
+капля в море
+        drop in the ocean</ar>
+<ar><k>клин клином вышибают</k>
+клин клином вышибают
+        one nail drives out another</ar>
+<ar><k>книга за семью печатями</k>
+книга за семью печатями
+        a closed book</ar>
+<ar><k>конечно</k>
+конечно
+        Sure
+ Certainly</ar>
+<ar><k>конечно нельзя</k>
+конечно, нельзя
+        Of course not
+ By no means
+ Absolutely not</ar>
+<ar><k>конечно нет</k>
+конечно, нет
+        Of course not
+ Certainly not</ar>
+<ar><k>короче говоря</k>
+короче говоря
+        in fine</ar>
+<ar><k>косвенные доказательства</k>
+косвенные доказательства
+        circumstantial evidence</ar>
+<ar><k>крайние взгляды</k>
+крайние взгляды
+        extreme views</ar>
+<ar><k>кроме того</k>
+кроме того
+        by the same token</ar>
+<ar><k>крупицы знаний</k>
+крупицы знаний
+        crumbs of knowledge</ar>
+<ar><k>линия поведения</k>
+линия поведения
+        line of conduct</ar>
+<ar><k>лист личных данных</k>
+лист личных данных
+        personal Data Sheet</ar>
+<ar><k>лично</k>
+лично
+        in person</ar>
+<ar><k>личные данные</k>
+личные данные
+        personal data (information)</ar>
+<ar><k>лишнее доказательство что</k>
+лишнее доказательство, что
+        by the same token</ar>
+<ar><k>ложка дегтя в бочке меда</k>
+ложка дегтя в бочке меда
+        a fly in the ointment</ar>
+<ar><k>лопнуть как мыльный пузырь</k>
+лопнуть как мыльный пузырь
+        burst like a babble</ar>
+<ar><k>луч надежды</k>
+луч надежды
+        a ray of hope</ar>
+<ar><k>лучше поздно чем никогда</k>
+лучше поздно, чем никогда
+        that is not lost that comes at last</ar>
+<ar><k>лучше познакомиться с</k>
+лучше познакомиться с
+        become better acquainted with</ar>
+<ar><k>любой ценой</k>
+любой ценой
+        at all costs</ar>
+<ar><k>максимально</k>
+максимально
+        to the utmost</ar>
+<ar><k>маловероятно чтобы</k>
+маловероятно, чтобы
+        It's hardly likely/most unlikely that...</ar>
+<ar><k>между нами</k>
+между нами
+        between ourselves</ar>
+<ar><k>между прочим</k>
+между прочим
+        by the way</ar>
+<ar><k>между тем</k>
+между тем
+        in the meantime; meanwhile</ar>
+<ar><k>много</k>
+много
+        (довольно) a good many</ar>
+<ar><k>можно сказать</k>
+можно сказать
+        in a manner of speaking</ar>
+<ar><k>мы все желаем вам успеха в</k>
+мы все желаем Вам успеха в
+        all of us here wish you success in</ar>
+<ar><k>мы должны признать что</k>
+мы должны признать, что
+        we have to admit that</ar>
+<ar><k>мы нашли общий язык</k>
+мы нашли общий язык
+        We've found a common language</ar>
+<ar><k>мы обо всем договорились</k>
+мы обо всем договорились
+        We've settled the matter/come to an agreement /understanding
+ We've come to terms</ar>
+<ar><k>на будущее</k>
+на будущее
+        from now on</ar>
+<ar><k>на бумаге</k>
+на бумаге
+        on paper</ar>
+<ar><k>на ложном пути</k>
+на ложном пути
+        on the wrong side of the post</ar>
+<ar><k>на мой взгляд</k>
+на мой взгляд
+        to my mind; in my view</ar>
+<ar><k>на основе вышеизложенного</k>
+на основе вышеизложенного
+        in view of the above (said)</ar>
+<ar><k>на первый взгляд</k>
+на первый взгляд
+        at (the) first blush</ar>
+<ar><k>на подъеме</k>
+на подъеме
+        on the up grade</ar>
+<ar><k>на правильном пути</k>
+на правильном пути
+        on the right side of the post</ar>
+<ar><k>на счастье</k>
+на счастье
+        for luck</ar>
+<ar><k>на худой конец</k>
+на худой конец
+        at the worst</ar>
+<ar><k>навсегда</k>
+навсегда
+        for keeps</ar>
+<ar><k>найти решение</k>
+найти решение
+        puzzle out</ar>
+<ar><k>накапливаться</k>
+накапливаться
+        mount up</ar>
+<ar><k>наоборот</k>
+наоборот
+        on the contrary</ar>
+<ar><k>наполовину</k>
+наполовину
+        by half</ar>
+<ar><k>напомнить</k>
+напомнить
+        bring to mind</ar>
+<ar><k>наравне с</k>
+наравне с
+        on a par with</ar>
+<ar><k>наравне с лучшими</k>
+наравне с лучшими
+        with the best</ar>
+<ar><k>насколько мне известно</k>
+насколько мне известно
+        to the best of my belief</ar>
+<ar><k>насколько мы знаем</k>
+насколько мы знаем
+        for all we known</ar>
+<ar><k>наталкиваться</k>
+наталкиваться
+        run against</ar>
+<ar><k>натолкнуться на</k>
+натолкнуться на
+        (что-либо) come across, come upon</ar>
+<ar><k>наудачу</k>
+наудачу
+        at random</ar>
+<ar><k>начинать новое дело</k>
+начинать новое дело
+        break new ground</ar>
+<ar><k>не говоря уже о</k>
+не говоря уже о
+        not to speak of</ar>
+<ar><k>не допускать</k>
+не допускать
+        keep out</ar>
+<ar><k>не иметь ничего общего</k>
+не иметь ничего общего
+        have nothing to do with</ar>
+<ar><k>не иметь отношение</k>
+не иметь отношение
+        have no bearing on</ar>
+<ar><k>не иметь склонности к</k>
+не иметь склонности к
+        (чему-либо) no relish for</ar>
+<ar><k>не имеющий выбора</k>
+не имеющий выбора
+        having no alternative</ar>
+<ar><k>не имеющий значения</k>
+не имеющий значения
+        of no account</ar>
+<ar><k>не кто иной как</k>
+не кто иной как
+        no less a person than</ar>
+<ar><k>не может быть и речи</k>
+не может быть и речи
+        out of the question</ar>
+<ar><k>не обращать внимание</k>
+не обращать внимание
+        make light of</ar>
+<ar><k>не обращать внимания</k>
+не обращать внимания
+        make light of</ar>
+<ar><k>не по вкусу</k>
+не по вкусу
+        no relish for</ar>
+<ar><k>не позволять</k>
+не позволять
+        keep out</ar>
+<ar><k>не придавать значение</k>
+не придавать значение
+        make light of</ar>
+<ar><k>не рисковать</k>
+не рисковать
+        take no chances</ar>
+<ar><k>не секрет</k>
+не секрет
+        an open secret</ar>
+<ar><k>не совпадать</k>
+не совпадать
+        be at variance</ar>
+<ar><k>не сомневаться</k>
+не сомневаться
+        beyond a doubt; without doubt</ar>
+<ar><k>недостаток</k>
+недостаток
+        (чего-либо) short of</ar>
+<ar><k>независимо от</k>
+независимо от
+        without reference to</ar>
+<ar><k>нельзя</k>
+нельзя
+        It is impossible
+ It is prohibited</ar>
+<ar><k>нельзя отрицать того что</k>
+нельзя отрицать того, что
+        There's no denying that...</ar>
+<ar><k>немало</k>
+немало
+        any number of</ar>
+<ar><k>ненормальный</k>
+ненормальный
+        out of the ordinary</ar>
+<ar><k>необычный</k>
+необычный
+        out of the ordinary</ar>
+<ar><k>неограниченное поле деятельности</k>
+неограниченное поле деятельности
+        open field</ar>
+<ar><k>неоднократно</k>
+неоднократно
+        many a time</ar>
+<ar><k>неотъемлемая часть</k>
+неотъемлемая часть
+        part and parcel</ar>
+<ar><k>неправильно понять</k>
+неправильно понять
+        get hold of the wrong end of the stick</ar>
+<ar><k>неравные шансы</k>
+неравные шансы
+        long odds</ar>
+<ar><k>несвоевременно</k>
+несвоевременно
+        out of season</ar>
+<ar><k>несомненно</k>
+несомненно
+        and no mistake; without question</ar>
+<ar><k>нет ни малейшего сомнения</k>
+нет ни малейшего сомнения
+        there is not a shadow of doubt</ar>
+<ar><k>нет ничего лучше</k>
+нет ничего лучше
+        nothing like</ar>
+<ar><k>нет худа без добра</k>
+нет худа без добра
+        every cloud has a silver lining</ar>
+<ar><k>неудача</k>
+неудача
+        wash-out</ar>
+<ar><k>неуместный</k>
+неуместный
+        out of place</ar>
+<ar><k>нехватка</k>
+нехватка
+        (чего-либо) short of</ar>
+<ar><k>нецелесообразно</k>
+нецелесообразно
+        beside the purpose</ar>
+<ar><k>ни в коем случае</k>
+ни в коем случае
+        on no account</ar>
+<ar><k>ни для кого не секрет</k>
+ни для кого не секрет
+        an open secret</ar>
+<ar><k>ни малейшего шанса</k>
+ни малейшего шанса
+        not the ghost of chance</ar>
+<ar><k>ни при каких обстоятельствах</k>
+ни при каких обстоятельствах
+        under no circumstances</ar>
+<ar><k>никакой</k>
+никакой
+        no manner of</ar>
+<ar><k>никоим образом</k>
+никоим образом
+        by no means</ar>
+<ar><k>ничего общего</k>
+ничего общего
+        as different as chalk from cheese</ar>
+<ar><k>ничтожный шанс</k>
+ничтожный шанс
+        an off chance</ar>
+<ar><k>нуждамать изобретений</k>
+нужда-мать изобретений
+        necessity is the mother of invention</ar>
+<ar><k>обдумать</k>
+обдумать
+        go over the ground</ar>
+<ar><k>обеспечивать себя</k>
+обеспечивать себя
+        (чем-либо) find oneself in</ar>
+<ar><k>обеспечить нужды</k>
+обеспечить нужды
+        supply the needs of</ar>
+<ar><k>обладать достаточным опытом квалификацией и возможностями</k>
+обладать достаточным опытом, квалификацией и возможностями
+        have sufficient experience, competence and facilities</ar>
+<ar><k>обнаружить</k>
+обнаружить
+        catch out</ar>
+<ar><k>оборудовать</k>
+оборудовать
+        fit up</ar>
+<ar><k>обоснованный</k>
+обоснованный
+        well founded</ar>
+<ar><k>обоюдоострый</k>
+обоюдо-острый
+        double-edged</ar>
+<ar><k>образцовый порядок</k>
+образцовый порядок
+        apple-pie order</ar>
+<ar><k>обратить внимание на</k>
+обратить внимание на
+        (что-либо) take note of</ar>
+<ar><k>обращать внимание на</k>
+обращать внимание на
+        pay attention to</ar>
+<ar><k>обращаться по поводу работы в качестве</k>
+обращаться по поводу работы в качестве
+        to apply for a position as</ar>
+<ar><k>обрывки сведений</k>
+обрывки сведений
+        crumbs of information</ar>
+<ar><k>обходиться</k>
+обходиться
+        make do with</ar>
+<ar><k>обходиться без</k>
+обходиться без
+        go without</ar>
+<ar><k>общеизвестно что</k>
+общеизвестно, что
+        It's common knowledge that</ar>
+<ar><k>обычно</k>
+обычно
+        by ordinary</ar>
+<ar><k>обычным путем</k>
+обычным путем
+        by ordinary</ar>
+<ar><k>один за другим</k>
+один за другим
+        one by one</ar>
+<ar><k>оказать содействие</k>
+оказать содействие
+        render assistance in
+ (to assist in)</ar>
+<ar><k>окончательный срок</k>
+окончательный срок
+        the bidding deadline</ar>
+<ar><k>опровергать</k>
+опровергать
+        give the lie to</ar>
+<ar><k>оригинальная идея</k>
+оригинальная идея
+        cute idea</ar>
+<ar><k>основанный на фактах</k>
+основанный на фактах
+        well founded</ar>
+<ar><k>острый вопрос</k>
+острый вопрос
+        vexed question</ar>
+<ar><k>осуществить</k>
+осуществить
+        carry through</ar>
+<ar><k>от имени</k>
+от имени
+        on behalf of</ar>
+<ar><k>отбрасывать</k>
+отбрасывать
+        cast aside</ar>
+<ar><k>отвергать</k>
+отвергать
+        cast aside</ar>
+<ar><k>отвечать за</k>
+отвечать за
+        answer for</ar>
+<ar><k>отдавать должное</k>
+отдавать должное
+        give credit to</ar>
+<ar><k>отказываться от</k>
+отказываться от
+        (чего-либо) back down</ar>
+<ar><k>открыть путь</k>
+открыть путь
+        clear the way; open the door to</ar>
+<ar><k>отчасти</k>
+отчасти
+        in a way</ar>
+<ar><k>охлаждать пыл</k>
+охлаждать пыл
+        throw cold water on</ar>
+<ar><k>оценить должным образом</k>
+оценить должным образом
+        do justice to</ar>
+<ar><k>очевидно</k>
+очевидно
+        clear as crystal</ar>
+<ar><k>очень много</k>
+очень много
+        a great many</ar>
+<ar><k>первоклассный</k>
+первоклассный
+        gift-edged</ar>
+<ar><k>первым делом</k>
+первым делом
+        in the first place</ar>
+<ar><k>перевесить</k>
+перевесить
+        turn the scales</ar>
+<ar><k>переделывать</k>
+переделывать
+        make over</ar>
+<ar><k>передумать</k>
+передумать
+        think better of</ar>
+<ar><k>перейти рубикон</k>
+перейти Рубикон
+        cross the Rubicon</ar>
+<ar><k>переходить к подробностям</k>
+переходить к подробностям
+        descend to particulars</ar>
+<ar><k>по всей вероятности</k>
+по всей вероятности
+        in all likehood; in all probability</ar>
+<ar><k>по меньшей мере</k>
+по меньшей мере
+        to say the least of it; at any rate</ar>
+<ar><k>по моему мнению</k>
+по моему мнению
+        to my mind; in my view</ar>
+<ar><k>по нашему мнению</k>
+по нашему мнению
+        in our opinion
+ (we believe/think/feel)</ar>
+<ar><k>по необходимости</k>
+по необходимости
+        of necessity</ar>
+<ar><k>по обе стороны</k>
+по обе стороны
+        on either hand</ar>
+<ar><k>по одному</k>
+по одному
+        one by one</ar>
+<ar><k>по причине</k>
+по причине
+        owing to</ar>
+<ar><k>по сути дела</k>
+по сути дела
+        as a matter of fact</ar>
+<ar><k>по этой причине</k>
+по этой причине
+        on this account</ar>
+<ar><k>поворотный пункт</k>
+поворотный пункт
+        (болезни) a turning point</ar>
+<ar><k>повсюду</k>
+повсюду
+        all over the place</ar>
+<ar><k>под влиянием</k>
+под влиянием
+        under the influence</ar>
+<ar><k>под необходимостью</k>
+под необходимостью
+        under the necessity of</ar>
+<ar><k>подвергать сомнению</k>
+подвергать сомнению
+        call in question</ar>
+<ar><k>подлить масла в огонь</k>
+подлить масла в огонь
+        add fuel to the flames</ar>
+<ar><k>поднимать</k>
+поднимать
+        (вопрос) bring up</ar>
+<ar><k>подобный</k>
+подобный
+        suchlike</ar>
+<ar><k>подозрительное обстоятельство</k>
+подозрительное обстоятельство
+        the nigger in the woodpile</ar>
+<ar><k>подсчитывать</k>
+подсчитывать
+        (что-либо) take account of</ar>
+<ar><k>подчинять</k>
+подчинять
+        bring under</ar>
+<ar><k>пожалуйста вышлите как можно скорее</k>
+пожалуйста, вышлите как можно скорее
+        kindly (could you) send as soon possible</ar>
+<ar><k>пожалуйста вышлите мне</k>
+пожалуйста, вышлите мне
+        will you please send me</ar>
+<ar><k>пожалуйста дайте мне</k>
+пожалуйста, дайте мне
+        Please give me ...
+ Will you please give me...
+ Would/could you give me...
+ Let me have...</ar>
+<ar><k>пожалуйста держите меня в курсе развития событий</k>
+пожалуйста, держите меня в курсе развития событий
+        please keep me informed (in the know) of all developments of the
+ matter</ar>
+<ar><k>пожалуйста если вас не затруднит дайте</k>
+пожалуйста, если вас не затруднит, дайте
+        Could you possibly give me?
+ Let me have..., please?
+ Can/may I trouble you for sth./to give/hand me..., please?
+ Could you do me a favour and give me..., please?
+ Would you please give me...?
+ Would you kindly give me..., please?</ar>
+<ar><k>пожалуйста пишите</k>
+пожалуйста пишите
+        please write</ar>
+<ar><k>пожалуйста поскорее разберитесь с этим вопросом</k>
+пожалуйста, поскорее разберитесь с этим вопросом
+        please give this matter your immediate (urgent) attention</ar>
+<ar><k>пожалуйста примите мои извенения за</k>
+пожалуйста, примите мои извенения за
+        please accept my appologies for</ar>
+<ar><k>пожалуйста сообщите мне как можно скорее</k>
+пожалуйста, сообщите мне как можно скорее
+        please inform me (let me know) in the shortest possible time (at
+ your earliest convenience)</ar>
+<ar><k>пожалуйста учтите что</k>
+пожалуйста, учтите, что
+        please note that</ar>
+<ar><k>позволить себе</k>
+позволить себе
+        take the liberty</ar>
+<ar><k>позвольте мне дать вам совет</k>
+позвольте мне дать вам совет
+        Let me give you a word of advice</ar>
+<ar><k>позвольте представиться</k>
+Позвольте представиться
+        Allow me to introduce myself
+ Let me introduce myself (to you)
+ May I introduce myself (to you</ar>
+<ar><k>поистине</k>
+поистине
+        in very truth</ar>
+<ar><k>пока</k>
+пока
+        for the present</ar>
+<ar><k>пока есть возможности</k>
+пока есть возможности
+        while the going is good</ar>
+<ar><k>пока еще</k>
+пока еще
+        as yet</ar>
+<ar><k>пока что</k>
+пока что
+        for the nonce</ar>
+<ar><k>полагать что</k>
+полагать, что
+        be of the opinion that</ar>
+<ar><k>положить конец</k>
+положить конец
+        (чему-либо) put an end to</ar>
+<ar><k>положить начало</k>
+положить начало
+        break the ice</ar>
+<ar><k>помимо вышеуказанного</k>
+помимо вышеуказанного
+        apart from the above (said, mentioned)</ar>
+<ar><k>помоему</k>
+по-моему
+        to my mind; in my view</ar>
+<ar><k>понемногу</k>
+понемногу
+        little by little</ar>
+<ar><k>поодиночке</k>
+поодиночке
+        one by one</ar>
+<ar><k>посредством</k>
+посредством
+        (чего-либо) by (or in) virtue of</ar>
+<ar><k>постепенно</k>
+постепенно
+        little by little</ar>
+<ar><k>потерять связь</k>
+потерять связь
+        lose touch with</ar>
+<ar><k>почти всегда</k>
+почти всегда
+        as often as not</ar>
+<ar><k>почти ничего</k>
+почти ничего
+        next to nothing</ar>
+<ar><k>почти что</k>
+почти что
+        just about</ar>
+<ar><k>появиться</k>
+появиться
+        come into existence</ar>
+<ar><k>появляться</k>
+появляться
+        make an appearance</ar>
+<ar><k>правильно</k>
+правильно
+        in (or within) reason</ar>
+<ar><k>превращать в</k>
+превращать в
+        convert into</ar>
+<ar><k>предел желаний</k>
+предел желаний
+        the height of ambition</ar>
+<ar><k>предельно</k>
+предельно
+        to the utmost</ar>
+<ar><k>предлагать свои услуги</k>
+предлагать свои услуги
+        come forward</ar>
+<ar><k>преднамеренно</k>
+преднамеренно
+        of set purpose</ar>
+<ar><k>представить в новом свете</k>
+представить в новом свете
+        (что-либо) put a new face on</ar>
+<ar><k>прерывать</k>
+прерывать
+        cut in</ar>
+<ar><k>при данных обстоятельствах</k>
+при данных обстоятельствах
+        in (or under) the circumstances</ar>
+<ar><k>при любых обстоятельствах</k>
+при любых обстоятельствах
+        in any circumstances</ar>
+<ar><k>при условии что</k>
+при условии, что
+        on condition that</ar>
+<ar><k>при этом условии</k>
+при этом условии
+        on this understanding</ar>
+<ar><k>приближаться</k>
+приближаться
+        draw near</ar>
+<ar><k>приводить в действие</k>
+приводить в действие
+        bring into play</ar>
+<ar><k>придерживаться противоположного мнения</k>
+придерживаться противоположного мнения
+        be on the other side of the fence</ar>
+<ar><k>признать свои ошибки</k>
+признать свои ошибки
+        stand corrected</ar>
+<ar><k>прийти к заключению</k>
+прийти к заключению
+        arrive at (or come to) the conclusion</ar>
+<ar><k>прийти к пониманию</k>
+прийти к пониманию
+        come to an understanding</ar>
+<ar><k>прийти к соглашению</k>
+прийти к соглашению
+        come to an arrangement</ar>
+<ar><k>принимать на веру</k>
+принимать на веру
+        take on trust</ar>
+<ar><k>принять к сведению</k>
+принять к сведению
+        (что-либо) take note (of)</ar>
+<ar><k>принять участие в</k>
+принять участие в
+        take the part in</ar>
+<ar><k>приобрести навык в</k>
+приобрести навык в
+        get the hang of</ar>
+<ar><k>провести тщательное расследование</k>
+провести тщательное расследование
+        make a narrow inquiry into</ar>
+<ar><k>проводить параллель</k>
+проводить параллель
+        draw a parallel</ar>
+<ar><k>продолжительный</k>
+продолжительный
+        long-drawn</ar>
+<ar><k>прокладывать путь</k>
+прокладывать путь
+        pave the way to</ar>
+<ar><k>прорваться</k>
+прорваться
+        break through</ar>
+<ar><k>просматривать</k>
+просматривать
+        look over</ar>
+<ar><k>противоречить</k>
+противоречить
+        (чему-либо) run counter to</ar>
+<ar><k>пути и способы</k>
+пути и способы
+        ways and means</ar>
+<ar><k>пятьдесят на пятьдесят</k>
+пятьдесят на пятьдесят
+        fifty-fifty</ar>
+<ar><k>ради</k>
+ради
+        for the good of</ar>
+<ar><k>раз так</k>
+раз так
+        if so</ar>
+<ar><k>развитие событий</k>
+развитие событий
+        course of events</ar>
+<ar><k>разносторонний</k>
+разносторонний
+        all-round</ar>
+<ar><k>разобраться</k>
+разобраться
+        study out</ar>
+<ar><k>разрабатывать</k>
+разрабатывать
+        work out</ar>
+<ar><k>разрешите представиться</k>
+Разрешите представиться
+        Allow me to introduce myself
+ Let me introduce myself (to you)
+ May I introduce myself (to you</ar>
+<ar><k>разрушить</k>
+разрушить
+        break down</ar>
+<ar><k>рано или поздно</k>
+рано или поздно
+        sooner or later</ar>
+<ar><k>рассеять</k>
+рассеять
+        (сомнения) clear up</ar>
+<ar><k>рассматривать вопрос вникая во все детали</k>
+рассматривать вопрос, вникая во все детали
+        labour the point</ar>
+<ar><k>рассчитать</k>
+рассчитать
+        go over the ground</ar>
+<ar><k>расходиться во мнениях</k>
+расходиться во мнениях
+        be at variance</ar>
+<ar><k>резюмировать</k>
+резюмировать
+        sum up</ar>
+<ar><k>рекомендации</k>
+рекомендации
+        references</ar>
+<ar><k>решение ряда вопросов</k>
+решение ряда вопросов
+        the solution of a number of matters (problems)</ar>
+<ar><k>решить исход дела</k>
+решить исход дела
+        turn the scales</ar>
+<ar><k>рискованный шаг</k>
+рискованный шаг
+        a leap in the dark</ar>
+<ar><k>рискованный шанс</k>
+рискованный шанс
+        sporting chance</ar>
+<ar><k>с каждой стороны</k>
+с каждой стороны
+        on either hand</ar>
+<ar><k>с моей стороны</k>
+с моей стороны
+        for my part</ar>
+<ar><k>с намерением</k>
+с намерением
+        with the view of; with a view to</ar>
+<ar><k>с начала до конца</k>
+с начала до конца
+        from first to last</ar>
+<ar><k>с общего согласия</k>
+с общего согласия
+        by common consent</ar>
+<ar><k>с тем же успехом</k>
+с тем же успехом
+        just as soon</ar>
+<ar><k>с тем чтобы</k>
+с тем, чтобы
+        so as to</ar>
+<ar><k>с точностью часового механизма</k>
+с точностью часового механизма
+        regular as clockwork</ar>
+<ar><k>с трудом</k>
+с трудом
+        by a narrow margin</ar>
+<ar><k>с целью</k>
+с целью
+        on purpose; with the view of; with a view to</ar>
+<ar><k>само собой разумеется</k>
+само собой разумеется
+        it is self understood
+ (it goes without saying)</ar>
+<ar><k>самое большее</k>
+самое большее
+        at the utmost</ar>
+<ar><k>сбрасывать со счетов</k>
+сбрасывать со счетов
+        write off</ar>
+<ar><k>сбываться</k>
+сбываться
+        come true</ar>
+<ar><k>сведения об образовании</k>
+сведения об образовании
+        education background</ar>
+<ar><k>сверх ожидания</k>
+сверх ожидания
+        beyond expection</ar>
+<ar><k>своевременно</k>
+своевременно
+        in good season</ar>
+<ar><k>сделать вывод из</k>
+сделать вывод из
+        (чего-либо) draw an inference from</ar>
+<ar><k>склад ума</k>
+склад ума
+        attitude of mind</ar>
+<ar><k>склонить чашу весов</k>
+склонить чашу весов
+        turn the scales</ar>
+<ar><k>склонность к</k>
+склонность к
+        a taste for</ar>
+<ar><k>сколь бы ни</k>
+сколь бы ни
+        never so</ar>
+<ar><k>скрытая причина</k>
+скрытая причина
+        the nigger in the woodpile</ar>
+<ar><k>слабое место</k>
+слабое место
+        blind side</ar>
+<ar><k>слабое утешение</k>
+слабое утешение
+        cold comfort</ar>
+<ar><k>следовать за</k>
+следовать за
+        go after</ar>
+<ar><k>следует однако помнить о том что</k>
+следует однако помнить о том, что
+        It is as well to remember that...</ar>
+<ar><k>следует признать что</k>
+следует признать, что
+        It must be admitted that...</ar>
+<ar><k>словно</k>
+словно
+        as if, as though</ar>
+<ar><k>смотреть предвзято</k>
+смотреть предвзято
+        take a jaundice view of</ar>
+<ar><k>со всех сторон</k>
+со всех сторон
+        on all hands</ar>
+<ar><k>со мной</k>
+со мной
+        should you require any further information, please feel free to
+ contact me</ar>
+<ar><k>со своей стороны</k>
+со своей стороны
+        for my part</ar>
+<ar><k>собирать данные</k>
+собирать данные
+        collect data</ar>
+<ar><k>собственной персоной</k>
+собственной персоной
+        in person</ar>
+<ar><k>совершенно исключено</k>
+совершенно исключено
+        out of the question</ar>
+<ar><k>совершенно очевидно</k>
+совершенно очевидно
+        it stands to reason</ar>
+<ar><k>совместно с</k>
+совместно с
+        in conjunction with</ar>
+<ar><k>совпадать</k>
+совпадать
+        fit in with</ar>
+<ar><k>современный</k>
+современный
+        up to date</ar>
+<ar><k>совсем не</k>
+совсем не
+        a long way off</ar>
+<ar><k>совсем не как</k>
+совсем не как
+        nothing like as</ar>
+<ar><k>соглашаться</k>
+соглашаться
+        come into line</ar>
+<ar><k>сомневаться</k>
+сомневаться
+        be in doubt</ar>
+<ar><k>сомнительный шанс</k>
+сомнительный шанс
+        long chance</ar>
+<ar><k>сообщите мне просто</k>
+сообщите мне просто
+        just let me know</ar>
+<ar><k>составная часть</k>
+составная часть
+        part and parcel</ar>
+<ar><k>сохранять право</k>
+сохранять право
+        reserve the right</ar>
+<ar><k>сохранять хладнокровие</k>
+сохранять хладнокровие
+        keep cool</ar>
+<ar><k>спасибо за все</k>
+спасибо за все
+        Thank you for everthing</ar>
+<ar><k>спасибо за ценные советы</k>
+спасибо за ценные советы
+        Thank you for your advice. It will be of great value to me</ar>
+<ar><k>спасибо что выслушали меня</k>
+спасибо, что выслушали меня
+        Thank you/ Thanks (ever so much) for hearing me out</ar>
+<ar><k>спасибо что согласились встретиться со мной</k>
+спасибо, что согласились встретиться со мной
+        Thank you for seeing me</ar>
+<ar><k>спасти положение</k>
+спасти положение
+        save the situation</ar>
+<ar><k>списывать со счетов</k>
+списывать со счетов
+        write off</ar>
+<ar><k>спорный</k>
+спорный
+        in question</ar>
+<ar><k>спорный вопрос</k>
+спорный вопрос
+        a matter of opinion</ar>
+<ar><k>спору нет</k>
+спору нет
+        it stands to reason</ar>
+<ar><k>справедливо</k>
+справедливо
+        in (or within) reason</ar>
+<ar><k>ссылаться на</k>
+ссылаться на
+        refer to</ar>
+<ar><k>ссылаясь на</k>
+ссылаясь на
+        in (or with) reference to</ar>
+<ar><k>ставить себе целью</k>
+ставить себе целью
+        go in for</ar>
+<ar><k>стаж работы</k>
+стаж работы
+        work experience</ar>
+<ar><k>сталкиваться с</k>
+сталкиваться с
+        come in contact with</ar>
+<ar><k>стать известным</k>
+стать известным
+        come to light</ar>
+<ar><k>стать употребительным</k>
+стать употребительным
+        acquire (or obtain, gain) currency</ar>
+<ar><k>столько же</k>
+столько же
+        as many</ar>
+<ar><k>строго говоря</k>
+строго говоря
+        strictly speaking</ar>
+<ar><k>строго конфиденциально</k>
+строго конфиденциально
+        in strict confidence</ar>
+<ar><k>судя по всему</k>
+судя по всему
+        to all appearances</ar>
+<ar><k>суммировать</k>
+суммировать
+        sum up</ar>
+<ar><k>суть</k>
+суть
+        backbone</ar>
+<ar><k>суть дела</k>
+суть дела
+        the root of the matter</ar>
+<ar><k>так сказать</k>
+так сказать
+        as it were</ar>
+<ar><k>таково мое мнение</k>
+таково мое мнение
+        This is the way I look at it.
+ This is the way I see it.</ar>
+<ar><k>творить чудеса</k>
+творить чудеса
+        do wonder</ar>
+<ar><k>тем временем</k>
+тем временем
+        in the interim</ar>
+<ar><k>тем не менее</k>
+тем не менее
+        none the less</ar>
+<ar><k>тем самым</k>
+тем самым
+        by that</ar>
+<ar><k>типичный</k>
+типичный
+        true to type</ar>
+<ar><k>то есть</k>
+то есть
+        that is</ar>
+<ar><k>только что</k>
+только что
+        just now</ar>
+<ar><k>тонкое различие</k>
+тонкое различие
+        fine distinction</ar>
+<ar><k>точно как часы</k>
+точно, как часы
+        like a clock</ar>
+<ar><k>точно так</k>
+точно так
+        just so; quite so</ar>
+<ar><k>трудно сказать</k>
+трудно сказать
+        there is no saying</ar>
+<ar><k>тщетные усилия</k>
+тщетные усилия
+        lost labour; lost efforts</ar>
+<ar><k>убить двух зайцев одним ударом</k>
+убить двух зайцев одним ударом
+        kill two birds with one stone</ar>
+<ar><k>увидеть</k>
+увидеть
+        set eyes on</ar>
+<ar><k>удивиться</k>
+удивиться
+        show surprise</ar>
+<ar><k>удивленно</k>
+удивленно
+        in surprise</ar>
+<ar><k>удовлетворить просьбу</k>
+удовлетворить просьбу
+        meet a request</ar>
+<ar><k>узость взглядов</k>
+узость взглядов
+        narrow opinions</ar>
+<ar><k>уклоняться от ответа</k>
+уклоняться от ответа
+        fence with a question</ar>
+<ar><k>укоротить</k>
+укоротить
+        cut short</ar>
+<ar><k>уникальный</k>
+уникальный
+        the one and only</ar>
+<ar><k>употреблять</k>
+употреблять
+        make use of</ar>
+<ar><k>упускать</k>
+упускать
+        leave out</ar>
+<ar><k>упустить из виду</k>
+упустить из виду
+        lose slight of</ar>
+<ar><k>уравновешивать</k>
+уравновешивать
+        weigh up</ar>
+<ar><k>устарелый</k>
+устарелый
+        out of date</ar>
+<ar><k>уступать место</k>
+уступать место
+        give place to</ar>
+<ar><k>уступать первенство</k>
+уступать первенство
+        give place to</ar>
+<ar><k>уступить место</k>
+уступить место
+        make way for</ar>
+<ar><k>утвердительно</k>
+утвердительно
+        in the affirmative</ar>
+<ar><k>утверждать голословно</k>
+утверждать голословно
+        beg the question</ar>
+<ar><k>ухватиться за</k>
+ухватиться за
+        (что-либо) catch hold of</ar>
+<ar><k>учитывать</k>
+учитывать
+        take into account</ar>
+<ar><k>фактически</k>
+фактически
+        in point of fact; in fact; in reality</ar>
+<ar><k>фактыупрямая вещь</k>
+факты-упрямая вещь
+        facts are stubborn things</ar>
+<ar><k>характерный</k>
+характерный
+        true to type</ar>
+<ar><k>хвататься за соломинку</k>
+хвататься за соломинку
+        clutch at a straw</ar>
+<ar><k>ценить высоко</k>
+ценить высоко
+        make much of</ar>
+<ar><k>центр всеобщего внимания</k>
+центр всеобщего внимания
+        the observed of all observers</ar>
+<ar><k>цепная реакция</k>
+цепная реакция
+        chain reaction</ar>
+<ar><k>чаще всего</k>
+чаще всего
+        as often as not</ar>
+<ar><k>чрезмерный</k>
+чрезмерный
+        out of all reason</ar>
+<ar><k>что к чему</k>
+что к чему
+        what is what</ar>
+<ar><k>что касается</k>
+что касается
+        as to (as regards, with regard to)</ar>
+<ar><k>чуть не</k>
+чуть не
+        all but</ar>
+<ar><k>широко распространенный</k>
+широко распространенный
+        widespread</ar>
+<ar><k>этим</k>
+этим
+        by that</ar>
+<ar><k>этого не может быть</k>
+этого не может быть
+        That can not be true</ar>
+<ar><k>я боюсь вы как раз в этом и не правы</k>
+я боюсь вы как раз в этом и не правы
+        That's where you're wrong, I'm afraid</ar>
+<ar><k>я боюсь что был слишком резок в своем выступлении</k>
+я боюсь, что был слишком резок в своем выступлении
+        I'm afraid I was overcritical in my statement</ar>
+<ar><k>я боюсь что вы упустили главное из того что я хотел сказать</k>
+я боюсь, что вы упустили главное из того, что я хотел сказать
+        I am afraid you've missed the point
+ Sorry, but you seem to have missed the point</ar>
+<ar><k>я боюсь что это именно так</k>
+я боюсь, что это именно так
+        I am afraid so
+ I am afraid it's just as you say</ar>
+<ar><k>я боюсь что я отнял у вас слишком много времени</k>
+я боюсь, что я отнял у вас слишком много времени
+        I;m afraid I've taken up too much of your time</ar>
+<ar><k>я боюсь это невозможно</k>
+я боюсь это невозможно
+        I'm afraid it's impossible</ar>
+<ar><k>я буду вам очень благодарен</k>
+я буду вам очень благодарен
+        I'll be very grateful to you
+ I'll be much obliged</ar>
+<ar><k>я буду вам чрезвычайно признателен если</k>
+я буду Вам чрезвычайно признателен, если
+        I will be grateful (obliged) if you will send us your price list</ar>
+<ar><k>я буду вынужден в противном случае</k>
+я буду вынужден, в противном случае
+        otherwise I will have to</ar>
+<ar><k>я буду признателен за скорый ответ</k>
+я буду признателен за скорый ответ
+        your early reply will be appreciated</ar>
+<ar><k>я бы с удовольствием но не могу</k>
+я бы с удовольствием..., но не могу
+        I'd be delighted ..., but I can,t
+ With pleasure..., but I can,t
+ I'd be willing/most willing... but I can't
+ I hate to say &quot;no&quot; but...</ar>
+<ar><k>я был бы рад иметь возможность</k>
+я был бы рад иметь возможность
+        I would welcome the opportunity</ar>
+<ar><k>я вам очень обязан</k>
+я вам очень обязан
+        I am deeply indebted to you</ar>
+<ar><k>я вам так благодарен</k>
+я вам так благодарен
+        I am so grateful to you!</ar>
+<ar><k>я вам чрезвычайно признателен</k>
+я вам чрезвычайно признателен
+        I'm very/most grateful to you/ so (very) grateful to you</ar>
+<ar><k>я вас знаю</k>
+я вас знаю
+        I know you</ar>
+<ar><k>я виноват в том что</k>
+я виноват в том, что
+        It is my fault that...</ar>
+<ar><k>я вполне согласен с вами</k>
+я вполне согласен с вами
+        I quite agree with you</ar>
+<ar><k>я вынужден напомнить вам к сожалению что</k>
+я вынужден напомнить вам, к сожалению, что
+        I am sorry (regret) to have to remind you that</ar>
+<ar><k>я доволен нашей встречей</k>
+я доволен нашей встречей
+        It was nice seeing you</ar>
+<ar><k>я доволен что мы обо всем договорились</k>
+я доволен, что мы обо всем договорились
+        I'm glad we've settled our business/come to an agreement/
+ understanding
+ I am glad we got everything settled/arranged</ar>
+<ar><k>я должен извиниться перед вами я очень виноват</k>
+я должен извиниться перед вами. Я очень виноват.
+        I must apologize to you. It was all my fault</ar>
+<ar><k>я должен поблагодарить вас за</k>
+я должен поблагодарить вас за
+        I (really) must thank you for...</ar>
+<ar><k>я должен признать что</k>
+я должен признать, что
+        I have to admit that</ar>
+<ar><k>я думаю вам следует</k>
+я думаю вам следует
+        I think you should...</ar>
+<ar><k>я думаю вам следует пересмотреть свою позицию</k>
+я думаю вам следует пересмотреть свою позицию
+        I think you should reconsider your position</ar>
+<ar><k>я заверяем вас</k>
+я заверяем вас
+        I assure you</ar>
+<ar><k>я заранее благодарю вас</k>
+я заранее благодарю вас
+        I would like to thank you in advance
+ Thank you in advance</ar>
+<ar><k>я извиняюсь за</k>
+я извиняюсь за
+        I appologize for</ar>
+<ar><k>я извиняюсь за беспокойство</k>
+я извиняюсь за беспокойство
+        Excuse my troubling/disturbing you</ar>
+<ar><k>я извиняюсь за свою оплошность</k>
+я извиняюсь за свою оплошность
+        Excuse my omission
+ Do forgive me. It was my mistake/fault</ar>
+<ar><k>я имею удовольствие предложить вам</k>
+я имею удовольствие предложить вам
+        I have the pleasure of offering you</ar>
+<ar><k>я могу ли</k>
+я могу ли
+        May I...?
+ Can I...?
+ Do you mind if I...?</ar>
+<ar><k>я надеюсь получить ответ в ближайшем будущем</k>
+я надеюсь получить ответ в ближайшем будущем
+        I am looking forward to hearing from you very soon
+ (I expect your early reply)
+ (I hope to hear from you very soon)</ar>
+<ar><k>я надеюсь продолжить сотрудничество с вами</k>
+я надеюсь продолжить сотрудничество с вами
+        I wish (would like) to maintain cooperation with you</ar>
+<ar><k>я надеюсь что это так</k>
+я надеюсь, что это так
+        I hope so</ar>
+<ar><k>я насколько понимаю</k>
+я насколько понимаю
+        As far as I can see...</ar>
+<ar><k>я начну с того что</k>
+я начну с того, что
+        As I see it...</ar>
+<ar><k>я не знаю смогу ли</k>
+я не знаю смогу ли
+        Not sure I'll be able to</ar>
+<ar><k>я не знаю этого</k>
+я не знаю этого
+        You're the first to tell me about it
+ Not that I know anything about it</ar>
+<ar><k>я не могу</k>
+я не могу
+        I'm powerless to (do sth)
+ I'm unable to (do sth)
+ It is beyond my power to (do sth)</ar>
+<ar><k>я не могу к сожалению</k>
+я не могу, к сожалению
+        I am sorry I am unable to</ar>
+<ar><k>я не могу с вами согласиться</k>
+я не могу с вами согласиться
+        I can't agree with you</ar>
+<ar><k>я не могу согласиться с вашей точкой зрения по следующим причинам</k>
+я не могу согласиться с вашей точкой зрения по следующим причинам
+        I cannot accept your point of view for the following reasons</ar>
+<ar><k>я не против этого</k>
+я не против этого
+        I have nothing against it</ar>
+<ar><k>я никак не могу</k>
+я никак не могу
+        I simply can't</ar>
+<ar><k>я о вас знаю</k>
+я о вас знаю
+        Your name sounds familiar
+ I've heard your name many times</ar>
+<ar><k>я ожидаю вашего согласия одобрения подтверждения</k>
+я ожидаю вашего согласия одобрения, подтверждения
+я ожидаю вашего согласия
+        I am looking forward to (receiving) your consent (approval,
+ confirmation)</ar>
+<ar><k>я отказываюсь</k>
+я отказываюсь
+        I refuse to (do sth)</ar>
+<ar><k>я очень признателен вам за то что вы прочитали мою статью</k>
+я очень признателен вам за то, что вы прочитали мою статью
+        Thank you so much for taking the trouble to read my article</ar>
+<ar><k>я очень советую вам</k>
+я очень советую вам
+        I strongly advise you to do sth</ar>
+<ar><k>я очень сожалею но</k>
+я очень сожалею, но...
+        I'm fully sorry but...</ar>
+<ar><k>я поздравляю вас с</k>
+я поздравляю вас с
+        May I offer (you) my congratulations on/upon</ar>
+<ar><k>я полностью согласен с вами</k>
+я полностью согласен с вами
+        I fully agree with you</ar>
+<ar><k>я понимаю вас но</k>
+я понимаю вас, но
+        I see your point, but</ar>
+<ar><k>я приношу извинения за задержку с ответом на ваше письмо</k>
+я приношу извинения за задержку с ответом на ваше письмо
+        I offer appologies for the delay in answering your letter</ar>
+<ar><k>я приношу свои извинения</k>
+я приношу свои извинения
+        Please accept my apologies
+ I apologize for...
+ Forgive me for...</ar>
+<ar><k>я против</k>
+я против
+        I'm against it</ar>
+<ar><k>я прошу вас рассмотреть мое предложение</k>
+я прошу Вас рассмотреть мое предложение
+        I ask you to consider my offer</ar>
+<ar><k>я прошу у вас прощения за то что не выполнил своего обещания</k>
+я прошу у вас прощения за то, что не выполнил своего обещания
+        Forgive me for not keeping my word/breaking my promise</ar>
+<ar><k>я рад с вами познакомиться</k>
+я рад с вами познакомиться
+        Pleased to meet you
+ I am very pleased to meet you
+ Glad to meet you
+ Delighted to meet you</ar>
+<ar><k>я рад сообщить вам что</k>
+я рад сообщить вам, что
+        I am pleased (glad) to inform you that</ar>
+<ar><k>я с удовольствием сделал это</k>
+я с удовольствием сделал это
+        It was a real pleasure for me to do it</ar>
+<ar><k>я советовал бы вам</k>
+я советовал бы вам
+        I would advise/recommend you...
+ I would suggest (that) you (should)...</ar>
+<ar><k>я советую вам</k>
+я советую вам
+        I suggest/advise/recommend you to do sth
+ I suggest/advise/recommend (that) you (should) do sth</ar>
+<ar><k>я сожалею но</k>
+я сожалею, но...
+        I'm sorry but...
+ I'm afraid...</ar>
+<ar><k>я сожалею что отнял у вас столько времени</k>
+я сожалею, что отнял у вас столько времени
+        (I'm) (awfully) sorry to have taken up so much of your time</ar>
+<ar><k>я сомневаюсь чтобы</k>
+я сомневаюсь, чтобы
+        I doubt that (if)...
+ I (rather) doubt it. I don't expect so</ar>
+<ar><k>я уверен в том что</k>
+я уверен в том, что
+        I am sure (confident) that</ar>
+<ar><k>я узнал из вашего письма что</k>
+я узнал из вашего письма, что
+        I learn from your letter that</ar>
+<ar><k>я хотел бы внести ясность</k>
+я хотел бы внести ясность
+        I'd like to make it clear that</ar>
+<ar><k>я хотел бы заверить вас</k>
+я хотел бы заверить вас
+        I would like to assure you</ar>
+<ar><k>я хотел бы но</k>
+я хотел бы..., но...
+        I'd like to..., but...</ar>
+<ar><k>я хотел бы поблагодарить вас за</k>
+я хотел бы поблагодарить вас за
+        I would like to express my gratitude/appreciation to you
+ for..
+ I wish to express my gratitude/appreciation to you for..</ar>
+<ar><k>я хотел бы попросить вас</k>
+я хотел бы попросить вас
+        I'd like (to ask) you to...
+ Could I ask you to...?</ar>
+<ar><k>я хотел бы посоветовать вам</k>
+я хотел бы посоветовать вам
+        I'd like to advise/ask/recommend you...
+ I'd like to suggest (that) you (should</ar>
+<ar><k>я хотел бы посоветовать вам пересмотрите свою точку зрения</k>
+я хотел бы посоветовать вам: пересмотрите свою точку зрения
+        May I suggest (that) you (should) reconsider your position</ar>
+<ar><k>я хотел бы представиться</k>
+я хотел бы представиться
+        Allow me to introduce myself
+ Let me introduce myself (to you)
+ May I introduce myself (to you</ar>
+<ar><k>я хочу обратить ваше внимание на тот факт что</k>
+я хочу обратить ваше внимание на тот факт, что
+        I wish to draw attention to the fact that
+ (I would like to note that)</ar>
+<ar><k>я хочу познакомить вас с</k>
+я хочу познакомить вас с
+        I'd like you to meet (Mr)
+ Allow me to introduce you to...
+ I want you to meet...
+ I'd like to introduce (to you)...
+ May I introduce (to you)...
+ Allow me to introduce you to...
+ Let me introduce you to...</ar>
+<ar><k>явное противоречие</k>
+явное противоречие
+        contradiction in terms</ar>
+</xdxf>

@@ -44,12 +44,20 @@
 							<ColumnDefinition Width="0.7*"/>
 						</Grid.ColumnDefinitions>
 						<ComboBox x:Name="StoredLoginComboBox" Grid.Column="1" Text="Имя Пользователя" FontSize="24" HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите имя пользователя"/>
+<<<<<<< HEAD
 						<PasswordBox x:Name="PasswordTextBox" Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите пароль, чтобы войти"/>
+=======
+						<PasswordBox Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите пароль. чтобы войти"/>
+>>>>>>> def41f0... Поправил код, переименовал переменные и функции
 						<TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Логин" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 						<TextBlock Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Пароль" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 						<CheckBox Content="Запомнить" Grid.Column="1" Grid.Row="2" FontSize="24" FlowDirection="RightToLeft" Foreground="{StaticResource BackgroundBrush}"/>
 					</Grid>
+<<<<<<< HEAD
 					<Button Content="Войти" Grid.Column="4" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}" Click="LogInButton_Click"/>
+=======
+					<Button Content="Войти" Grid.Column="4" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}"/>
+>>>>>>> def41f0... Поправил код, переименовал переменные и функции
 					<Button Content="Новый" Grid.Column="1" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}" Click="NewUserButton_Click"/>
 				</Grid>
 			</TabItem>
@@ -73,7 +81,11 @@
 							<ColumnDefinition Width="50"/>
 						</Grid.ColumnDefinitions>
 						<TextBlock TextWrapping="NoWrap" Text="Английский" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
+<<<<<<< HEAD
 						<TextBox MouseDoubleClick="textBox_DoubleClick" Margin="8,4,0,4" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Найти слово..." HorizontalAlignment="Stretch" FontSize="24" />
+=======
+						<TextBox MouseDoubleClick="TextBoxDblClick" Margin="8,4,0,4" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Найти слово..." HorizontalAlignment="Stretch" FontSize="24" />
+>>>>>>> def41f0... Поправил код, переименовал переменные и функции
 						<Button Grid.Column="1" Height="30" Width="30" Grid.Row="1"  Style="{StaticResource DialogButtonStyle}">
 							<Image Margin="0,1" Source="Loopa.png"/>  	
 						</Button>
@@ -102,8 +114,13 @@
 								<ColumnDefinition Width="0.787*"/>
 								<ColumnDefinition Width="50"/>
 							</Grid.ColumnDefinitions>
+<<<<<<< HEAD
 							<TextBox MouseDoubleClick="textBox_DoubleClick" x:Name="AddTranslationTextBox" Grid.Row="1" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый перевод" FontSize="18"/>
 							<TextBox MouseDoubleClick="textBox_DoubleClick" x:Name="AddCommentTextBox" Grid.Row="2" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый комментарий" FontSize="18"/>
+=======
+							<TextBox MouseDoubleClick="TextBoxDblClick" x:Name="AddTranslationTextBox" Grid.Row="1" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый перевод" FontSize="18"/>
+							<TextBox MouseDoubleClick="TextBoxDblClick" x:Name="AddCommentTextBox" Grid.Row="2" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый комментарий" FontSize="18"/>
+>>>>>>> def41f0... Поправил код, переименовал переменные и функции
 							<Button Height="30" Width="30"  Style="{StaticResource DialogButtonStyle}"  Grid.Column="1" Grid.Row="0">
 								<Image Source="Minus.png" RenderTransformOrigin="0.5,0.5">
 									<Image.RenderTransform>
