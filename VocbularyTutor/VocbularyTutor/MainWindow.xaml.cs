@@ -17,7 +17,7 @@ namespace VocbularyTutor
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window,IAuthorisationProvider
     {
         Color PassiveColor;
         Color ActiveColor;
@@ -156,6 +156,28 @@ namespace VocbularyTutor
             LoginTextBox.TextWrapping = TextWrapping.Wrap;
             LoginTextBox.HorizontalAlignment = HorizontalAlignment.Stretch;
             LoginTextBox.VerticalAlignment   = VerticalAlignment.Center;
+        }
+
+        private void LogInButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Authorisation.Authorise() == AuthorisationResult.Success)
+            {
+                //Success!
+            }
+            else
+            {
+                //Failed!!
+            }
+        }
+
+        public string GetLogin()
+        {
+            return StoredLoginComboBox.Text;
+        }
+
+        public string GetPassword()
+        {
+            return PasswordTextBox.Password;
         }
     }
 }

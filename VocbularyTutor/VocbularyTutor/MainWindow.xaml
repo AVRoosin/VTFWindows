@@ -44,12 +44,12 @@
 							<ColumnDefinition Width="0.7*"/>
 						</Grid.ColumnDefinitions>
 						<ComboBox x:Name="StoredLoginComboBox" Grid.Column="1" Text="Имя Пользователя" FontSize="24" HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите имя пользователя"/>
-						<PasswordBox Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите пароль. чтобы войти"/>
+						<PasswordBox x:Name="PasswordTextBox" Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите пароль, чтобы войти"/>
 						<TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Логин" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 						<TextBlock Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Пароль" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 						<CheckBox Content="Запомнить" Grid.Column="1" Grid.Row="2" FontSize="24" FlowDirection="RightToLeft" Foreground="{StaticResource BackgroundBrush}"/>
 					</Grid>
-					<Button Content="Войти" Grid.Column="4" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}"/>
+					<Button Content="Войти" Grid.Column="4" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}" Click="LogInButton_Click"/>
 					<Button Content="Новый" Grid.Column="1" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}" Click="NewUserButton_Click"/>
 				</Grid>
 			</TabItem>
