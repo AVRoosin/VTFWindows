@@ -17,7 +17,7 @@ namespace VocbularyTutor
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, IAuthorisationProvider
     {
         Color PassiveColor;
         Color ActiveColor;
@@ -122,40 +122,62 @@ namespace VocbularyTutor
             sw.ShowDialog();
         }
 
-        private void _tabItem_LostFocus(object sender, RoutedEventArgs e)
+        private void tabItem_LostFocus(object sender, RoutedEventArgs e)
         {
             TabItem tab = new TabItem();
             tab = (TabItem)sender;
             tab.Foreground = new SolidColorBrush(PassiveColor);
         }
 
-        private void _tabItem_GotFocus(object sender, RoutedEventArgs e)
+        private void tabItem_GotFocus(object sender, RoutedEventArgs e)
         {
             TabItem tab = new TabItem();
             tab = (TabItem)sender;
             tab.Foreground = new SolidColorBrush(ActiveColor);
         }
 
-        private void TextBoxDblClick(object sender, RoutedEventArgs e)
+        private void textBox_DoubleClick(object sender, RoutedEventArgs e)
         {
-            TextBox tb=new TextBox();
+            TextBox tb = new TextBox();
             tb = (TextBox) sender;
-            tb.SelectionStart = 0;
+            tb.SelectionStart  = 0;
             tb.SelectionLength = tb.Text.Length;
         }
 
-        private void NewUserCreation(object sender, RoutedEventArgs e)
+        private void NewUserButton_Click(object sender, RoutedEventArgs e)
         {
             LoginGrid.Children.Remove(StoredLoginComboBox);
             TextBox LoginTextBox = new TextBox();
-            LoginTextBox.Text = "Имя пользователя";
+            LoginTextBox.Text    = "Имя пользователя";
             LoginGrid.Children.Add(LoginTextBox);
-            LoginTextBox.SetValue(Grid.ColumnProperty,1);
+            LoginTextBox.SetValue(Grid.ColumnProperty, 1);
             LoginTextBox.SetValue(Grid.RowProperty, 0);
-            LoginTextBox.FontSize = 24;
+            LoginTextBox.FontSize     = 24;
             LoginTextBox.TextWrapping = TextWrapping.Wrap;
             LoginTextBox.HorizontalAlignment = HorizontalAlignment.Stretch;
-            LoginTextBox.VerticalAlignment = VerticalAlignment.Center;
+            LoginTextBox.VerticalAlignment   = VerticalAlignment.Center;
+        }
+
+        private void LogInButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Authorisation.Authorise() == AuthorisationResult.Success)
+            {
+                //Success!
+            }
+            else
+            {
+                //Failed!!
+            }
+        }
+
+        public string GetLogin()
+        {
+            return StoredLoginComboBox.Text;
+        }
+
+        public string GetPassword()
+        {
+            return PasswordTextBox.Password;
         }
     }
 }

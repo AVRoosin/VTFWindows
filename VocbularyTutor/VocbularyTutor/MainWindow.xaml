@@ -14,7 +14,7 @@
 		</Grid.ColumnDefinitions>
 		<Rectangle Grid.ColumnSpan="2" Grid.RowSpan="2" Fill="{StaticResource BackgroundBrush}" MouseLeftButtonDown="Window_Drag" />
 		<TabControl x:Name="_menuTabControl" TabStripPlacement="Left" Grid.Row="1" Grid.ColumnSpan="2" Background="{x:Null}" d:LayoutOverrides="GridBox" MouseLeftButtonDown="Window_Drag">
-			<TabItem x:Name="UsersTabItem" Header="Пользователь" Foreground="{StaticResource BackgroundBrush}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+			<TabItem x:Name="UsersTabItem" Header="Пользователь" Foreground="{StaticResource BackgroundBrush}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
 				<Grid x:Name="UserSelectionGrid">
 					<Grid.RowDefinitions>
 						<RowDefinition Height="0.2*"/>
@@ -44,16 +44,16 @@
 							<ColumnDefinition Width="0.7*"/>
 						</Grid.ColumnDefinitions>
 						<ComboBox x:Name="StoredLoginComboBox" Grid.Column="1" Text="Имя Пользователя" FontSize="24" HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите имя пользователя"/>
-						<PasswordBox Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите пароль. чтобы войти"/>
+						<PasswordBox x:Name="PasswordTextBox" Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="stretch" VerticalAlignment="Center" Foreground="Black" ToolTip="Введите пароль, чтобы войти"/>
 						<TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Логин" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 						<TextBlock Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Пароль" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 						<CheckBox Content="Запомнить" Grid.Column="1" Grid.Row="2" FontSize="24" FlowDirection="RightToLeft" Foreground="{StaticResource BackgroundBrush}"/>
 					</Grid>
-					<Button Content="Войти" Grid.Column="4" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}"/>
-					<Button Content="Новый" Grid.Column="1" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}" Click="NewUserCreation"/>
+					<Button Content="Войти" Grid.Column="4" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}" Click="LogInButton_Click"/>
+					<Button Content="Новый" Grid.Column="1" Grid.Row="3" Template="{DynamicResource CommonButton}" Grid.ColumnSpan="2" Foreground="{StaticResource TabItemBackgroundBrush}" Click="NewUserButton_Click"/>
 				</Grid>
 			</TabItem>
-			<TabItem x:Name="DictionaryTabItem" Header="Словарь" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" Background="{x:Null}" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+			<TabItem x:Name="DictionaryTabItem" Header="Словарь" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" Background="{x:Null}" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
 				<Grid >
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="*" MinWidth="150"/>
@@ -73,7 +73,7 @@
 							<ColumnDefinition Width="50"/>
 						</Grid.ColumnDefinitions>
 						<TextBlock TextWrapping="NoWrap" Text="Английский" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
-						<TextBox MouseDoubleClick="TextBoxDblClick" Margin="8,4,0,4" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Найти слово..." HorizontalAlignment="Stretch" FontSize="24" />
+						<TextBox MouseDoubleClick="textBox_DoubleClick" Margin="8,4,0,4" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Найти слово..." HorizontalAlignment="Stretch" FontSize="24" />
 						<Button Grid.Column="1" Height="30" Width="30" Grid.Row="1"  Style="{StaticResource DialogButtonStyle}">
 							<Image Margin="0,1" Source="Loopa.png"/>  	
 						</Button>
@@ -102,8 +102,8 @@
 								<ColumnDefinition Width="0.787*"/>
 								<ColumnDefinition Width="50"/>
 							</Grid.ColumnDefinitions>
-							<TextBox MouseDoubleClick="TextBoxDblClick" x:Name="AddTranslationTextBox" Grid.Row="1" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый перевод" FontSize="18"/>
-							<TextBox MouseDoubleClick="TextBoxDblClick" x:Name="AddCommentTextBox" Grid.Row="2" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый комментарий" FontSize="18"/>
+							<TextBox MouseDoubleClick="textBox_DoubleClick" x:Name="AddTranslationTextBox" Grid.Row="1" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый перевод" FontSize="18"/>
+							<TextBox MouseDoubleClick="textBox_DoubleClick" x:Name="AddCommentTextBox" Grid.Row="2" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый комментарий" FontSize="18"/>
 							<Button Height="30" Width="30"  Style="{StaticResource DialogButtonStyle}"  Grid.Column="1" Grid.Row="0">
 								<Image Source="Minus.png" RenderTransformOrigin="0.5,0.5">
 									<Image.RenderTransform>
@@ -127,7 +127,7 @@
 					</Grid>
 				</Grid>
 			</TabItem>
-			<TabItem x:Name="TestsTabItem" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+			<TabItem x:Name="TestsTabItem" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
 				<Grid x:Name="TestsPanelMainGrid">
 					<Grid.RowDefinitions>
 						<RowDefinition Height="0.05*"/>
@@ -149,7 +149,7 @@
 					<TextBlock Grid.Column="2" Margin="8" Grid.Row="2" TextWrapping="Wrap" Text="Собстственно, само описание пихаем сюда" Style="{DynamicResource DefaultVTTextBlockStyle}" FontStyle="Italic"/>
 				</Grid>
 			</TabItem>
-			<TabItem x:Name="TestsTabItem1" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+			<TabItem x:Name="TestsTabItem1" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
 				<Grid >
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="0.3*"/>
@@ -173,13 +173,13 @@
 					<Button Grid.Column="2" Grid.Row="4" Content="Ответить" Margin="8" x:Name="MakeAnswerButton" Template="{DynamicResource CommonButton}" Foreground="{StaticResource TabItemBackgroundBrush}"/>
 				</Grid>
 			</TabItem>
-			<TabItem x:Name="TestsTabItem2" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+			<TabItem x:Name="TestsTabItem2" Header="Тесты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
 				<Grid />
 			</TabItem>
-			<TabItem x:Name="ResultsTabItem" Header="Результаты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+			<TabItem x:Name="ResultsTabItem" Header="Результаты" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
 				<Grid />
 			</TabItem>
-			<TabItem x:Name="_AchievementsTabItem" Header="Достижения" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="_tabItem_GotFocus" LostFocus="_tabItem_LostFocus">
+			<TabItem x:Name="_AchievementsTabItem" Header="Достижения" Background="{x:Null}" Foreground="{StaticResource TopTextColor}" FontSize="29.333" FontFamily="Calibri" GotFocus="tabItem_GotFocus" LostFocus="tabItem_LostFocus">
 				<Grid />
 			</TabItem>
 		</TabControl>
