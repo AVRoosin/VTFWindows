@@ -117,6 +117,7 @@
     <Resource Include="cogwheel-3.png" />
     <Resource Include="Exit.png" />
     <Resource Include="Loopa.png" />
+    <Resource Include="Max.png" />
     <Resource Include="Min.png" />
     <Resource Include="Minus.png" />
     <Resource Include="Plus.png" />
