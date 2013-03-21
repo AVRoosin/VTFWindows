@@ -120,8 +120,6 @@
     <Resource Include="Min.png" />
     <Resource Include="Minus.png" />
     <Resource Include="Plus.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

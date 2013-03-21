@@ -23,33 +23,33 @@ namespace VocbularyTutor
             XmlNodeList PasswordsList;
             XmlNodeList RegistrationDatesList;
             var UsersStorage = new XmlDocument();
-            UserList=new List<User>();
+            UserList = new List<User>();
             UsersStorage.Load("Users.xml");
             NamesList = UsersStorage.GetElementsByTagName("UserName");
             PasswordsList = UsersStorage.GetElementsByTagName("Password");
-            RegistrationDatesList = UsersStorage.GetElementsByTagName("Registratindate");
-            for(int i=0;i<NamesList.Count;i++)
+            RegistrationDatesList = UsersStorage.GetElementsByTagName("Registrationdate");
+            for (int i = 0; i < NamesList.Count; i++)
             {
                 var newuser = new User(NamesList[i].InnerText, PasswordsList[i].InnerText,
                                        RegistrationDatesList[i].InnerText);
                 UserList.Add(newuser);
-             }
+            }
         }
-        public List<String>GetUsersList()
+        public List<String> GetUsersList()
         {
-            List<String> CurrentList=new List<String>();
-            for (int i = 0; i < UserList.Count;i++ )
+            List<String> CurrentList = new List<String>();
+            for (int i = 0; i < UserList.Count; i++)
             {
                 CurrentList.Add(UserList[i].GetUserName());
             }
-                return CurrentList;
+            return CurrentList;
         }
 
         public bool CheckPassword(String name, String password)
         {
-            for (int i = 0; i < UserList.Count;i++ )
+            for (int i = 0; i < UserList.Count; i++)
             {
-                if(UserList[i].CheckPassword(name,password))
+                if (UserList[i].CheckPassword(name, password))
                 {
                     return true;
                 }
@@ -65,7 +65,7 @@ namespace VocbularyTutor
                 {
                     String line = streamReader.ReadToEnd();
                     List<String> usersList = new List<String>();
-                    var login = provider.GetLogin();
+                    var login    = provider.GetLogin();
                     var password = provider.GetPassword();
                 }
             }
@@ -75,6 +75,7 @@ namespace VocbularyTutor
             }
             return AuthorisationResult.Success;
         }
+
         class User
         {
             private String UserName;

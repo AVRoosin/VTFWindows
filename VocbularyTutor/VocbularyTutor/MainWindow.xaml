@@ -122,7 +122,7 @@
 									</Image.RenderTransform>
 								</Image>  	
 							</Button>
-							<local:DoubleTextBlock x:Name="translation1"  Grid.Row="0" Grid.Column="0" MainText="Перевод1" CommentText="Сюда мы запишем комментарий" ToolTip="Сюда мы запишем комментарий"/>
+							<local:DoubleTextBlock x:Name="translation"  Grid.Row="0" Grid.Column="0" MainText="Перевод1" CommentText="Сюда мы запишем комментарий" ToolTip="Сюда мы запишем комментарий"/>
 						</Grid>
 					</Grid>
 				</Grid>

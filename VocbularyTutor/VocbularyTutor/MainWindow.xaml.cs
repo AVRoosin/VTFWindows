@@ -27,11 +27,11 @@ namespace VocbularyTutor
         {
             UnableTabItems();
             this.UsersTabItem.Focus();
-            auth=new Authorisation();
+            auth = new Authorisation();
             this.StoredLoginComboBox.ItemsSource = auth.GetUsersList();
-            this.translation1.MainText =    "MainText";
-            this.translation1.CommentText = "Сюда мы запишем новый комментарий и поглядим, как он отобразится";
-            this.translation1.ToolTip =     "Сюда мы запишем новый комментарий и поглядим, как он отобразится";
+            this.translation.MainText =    "MainText";
+            this.translation.CommentText = "Сюда мы запишем новый комментарий и поглядим, как он отобразится";
+            this.translation.ToolTip =     "Сюда мы запишем новый комментарий и поглядим, как он отобразится";
         }
 
         public MainWindow()
@@ -47,7 +47,6 @@ namespace VocbularyTutor
             ActiveColor.R  = 88;
             ActiveColor.G  = 105;
             ActiveColor.B  = 113;
-
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
