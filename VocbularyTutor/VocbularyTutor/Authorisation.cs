@@ -22,16 +22,18 @@ namespace VocbularyTutor
             XmlNodeList NamesList;
             XmlNodeList PasswordsList;
             XmlNodeList RegistrationDatesList;
+            XmlNodeList AuthorisationList;
             var UsersStorage = new XmlDocument();
             UserList = new List<User>();
             UsersStorage.Load("Users.xml");
             NamesList = UsersStorage.GetElementsByTagName("UserName");
             PasswordsList = UsersStorage.GetElementsByTagName("Password");
             RegistrationDatesList = UsersStorage.GetElementsByTagName("Registrationdate");
+            AuthorisationList = UsersStorage.GetElementsByTagName("IsAuthorised");
             for (int i = 0; i < NamesList.Count; i++)
             {
                 var newuser = new User(NamesList[i].InnerText, PasswordsList[i].InnerText,
-                                       RegistrationDatesList[i].InnerText);
+                                       RegistrationDatesList[i].InnerText, AuthorisationList[i].InnerText);
                 UserList.Add(newuser);
             }
         }
@@ -55,6 +57,18 @@ namespace VocbularyTutor
                 }
             }
             return false;
+        }
+
+        public int CheckIfAlreadyAuthorised()
+        {
+            for (int i = 0; i < UserList.Count; i++)
+            {
+                if (UserList[i].IsAuthorised)
+                {
+                    return i+1;
+                }
+            }
+            return 0;
         }
 
         static public AuthorisationResult Authorise()
@@ -81,12 +95,32 @@ namespace VocbularyTutor
             private String UserName;
             private String UserPassword;
             private DateTime RegistrationDate;
-            public User(String name, String password, String regDate)
+            private bool isAuthorised;
+            public bool IsAuthorised
+            {
+                get
+                {
+                    return isAuthorised;
+                }
+                set
+                {
+                    if (value.GetType()==typeof(bool))
+                    {
+                        isAuthorised = value;
+                    }
+                    else
+                    {
+                        throw new ArgumentException("Boolean type expected!");
+                    }
+                }
+            }
+            public User(String name, String password, String regDate, String authorised)
             {
                 UserName = name;
                 UserPassword = password;
                 RegistrationDate = new DateTime();
                 RegistrationDate = DateTime.Parse(regDate);
+                IsAuthorised = (authorised=="1");
             }
             public bool CheckPassword(String name, String password)
             {
