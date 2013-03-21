@@ -115,7 +115,14 @@ namespace VocbularyTutor
 
 		 private void MaximizeButton_Click(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Maximized;
+             if(WindowState==WindowState.Maximized)
+             {
+                 WindowState = WindowState.Normal;
+             }
+             else
+             {
+                 WindowState = WindowState.Maximized;
+             }
         }
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
