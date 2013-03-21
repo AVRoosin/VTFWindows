@@ -162,9 +162,11 @@ namespace VocbularyTutor
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-            if (Authorisation.Authorise() == AuthorisationResult.Success || auth.CheckPassword(StoredLoginComboBox.Items.CurrentItem.ToString(), PasswordTextBox.Password))
+            if (Authorisation.Authorise() == AuthorisationResult.Success || auth.CheckPassword(StoredLoginComboBox.SelectedItem.ToString(), PasswordTextBox.Password))
             {
+                GreetingsTextblock.Text = "Добро пожаловать, " + StoredLoginComboBox.SelectedItem.ToString() + "!";
                 EnableTabItems();
+                PasswordTextBox.Password = "";
                 //Success!
             }
             else
