@@ -120,7 +120,7 @@ namespace VocbularyTutor
                 UserPassword = password;
                 RegistrationDate = new DateTime();
                 RegistrationDate = DateTime.Parse(regDate);
-                IsAuthorised = (authorised=="1");
+                IsAuthorised = (authorised=="true");
             }
             public bool CheckPassword(String name, String password)
             {

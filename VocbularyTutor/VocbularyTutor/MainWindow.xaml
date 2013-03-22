@@ -75,7 +75,7 @@
 						<TextBlock TextWrapping="NoWrap" Text="Английский" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource DefaultVTTextBlockStyle}"/>
 						<TextBox MouseDoubleClick="textBox_DoubleClick" Margin="8,4,0,4" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Найти слово..." HorizontalAlignment="Stretch" FontSize="24" />
 						<Button Grid.Column="1" Height="30" Width="30" Grid.Row="1"  Style="{StaticResource DialogButtonStyle}">
-							<Image Margin="0,1" Source="Loopa.png"/>  	
+							<Image Margin="0,1" Source="Pictures\Loopa.png"/>  	
 						</Button>
 						<ListBox Margin="8" Grid.Row="2" Grid.ColumnSpan="2"/>
 						<Button Content="Добавить" Margin="8" Grid.Row="3" Grid.ColumnSpan="2" Template="{DynamicResource CommonButton}" Foreground="{StaticResource TabItemBackgroundBrush}"/>
@@ -105,7 +105,7 @@
 							<TextBox MouseDoubleClick="textBox_DoubleClick" x:Name="AddTranslationTextBox" Grid.Row="1" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый перевод" FontSize="18"/>
 							<TextBox MouseDoubleClick="textBox_DoubleClick" x:Name="AddCommentTextBox" Grid.Row="2" TextWrapping="NoWrap" HorizontalAlignment="Stretch" d:LayoutOverrides="Height" Margin="4" Text="Новый комментарий" FontSize="18"/>
 							<Button Height="30" Width="30"  Style="{StaticResource DialogButtonStyle}"  Grid.Column="1" Grid.Row="0">
-								<Image Source="Minus.png" RenderTransformOrigin="0.5,0.5">
+								<Image Source="Pictures\Minus.png" RenderTransformOrigin="0.5,0.5">
 									<Image.RenderTransform>
 										<TransformGroup>
 											<ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
@@ -114,7 +114,7 @@
 								</Image>  	
 							</Button>
 							<Button x:Name="AddTranslationButton"  Height="30" Width="30"  Style="{StaticResource DialogButtonStyle}"  Grid.Column="1" Grid.Row="1" Click="AddTranslationButton_Click">
-								<Image Source="Plus.png" RenderTransformOrigin="0.5,0.5">
+                                <Image Source="Pictures\Plus.png" RenderTransformOrigin="0.5,0.5">
 									<Image.RenderTransform>
 										<TransformGroup>
 											<ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
@@ -185,16 +185,16 @@
 		</TabControl>
 		<StackPanel x:Name="MenuButtonsStackPanel" Grid.Column="1" Grid.Row="0" Orientation="Horizontal" FlowDirection="righttoleft">
 			<Button x:Name="ExitButton"  HorizontalAlignment="Right" Height="36" Width="36"  Style="{StaticResource DialogButtonStyle}" Click="ExitButton_Click" Margin="8,0,0,0">
-				<Image Source="Exit.png"/>
+                <Image Source="Pictures\Exit.png"/>
 			</Button>
 			<Button x:Name="MaximizeButton"  HorizontalAlignment="Right" Height="36" Width="36" Style="{StaticResource DialogButtonStyle}" Click="MaximizeButton_Click" Margin="8,0,0,0">
-				<Image Source="Max.png"/>
+                <Image Source="Pictures\Max.png"/>
 			</Button>
 			<Button x:Name="MinimizeButton"  HorizontalAlignment="Right" Height="36" Width="36" Style="{StaticResource DialogButtonStyle}" Click="MinimizeButton_Click" Margin="8,0,0,0">
-				<Image Source="Min.png"/>
+                <Image Source="Pictures\Min.png"/>
 			</Button>
 			<Button x:Name="SettingsButton" HorizontalAlignment="Right" Height="36" Width="36"  Style="{StaticResource DialogButtonStyle}" Click="SettingsButton_Click" Margin="8,0,0,0">
-				<Image Source="cogwheel-3.png"/>
+                <Image Source="Pictures\cogwheel-3.png"/>
 			</Button>
 		</StackPanel>
 		<TextBlock Margin=" 0,8,0,8" x:Name="TopTextBlock" MouseLeftButtonDown="Window_Drag"  TextWrapping="Wrap" Text="VocabularyTutor" Foreground="#FFA1FF06" FontSize="37.333" TextAlignment="Center" FontFamily="Calibri"/>

@@ -4,24 +4,24 @@
     <UserName>AVRoosin</UserName>
     <Password>32167</Password>
     <Registrationdate>27.11.2012</Registrationdate>
-    <IsAuthorised>0</IsAuthorised>
+    <IsAuthorised>false</IsAuthorised>
   </User>
   <User>
     <UserName>Igor Oleynick</UserName>
     <Password>123</Password>
     <Registrationdate>27.12.2012</Registrationdate>
-    <IsAuthorised>0</IsAuthorised>
+    <IsAuthorised>false</IsAuthorised>
   </User>
   <User>
     <UserName>Andrey Nenahov</UserName>
     <Password>321</Password>
     <Registrationdate>27.01.2013</Registrationdate>
-    <IsAuthorised>0</IsAuthorised>
+    <IsAuthorised>false</IsAuthorised>
   </User>
   <User>
     <UserName>Nikita Zverev</UserName>
     <Password>q</Password>
     <Registrationdate>27.02.2013</Registrationdate>
-    <IsAuthorised>0</IsAuthorised>
+    <IsAuthorised>false</IsAuthorised>
   </User>
 </UserList>

@@ -201,5 +201,6 @@
 		<Setter Property="Foreground" Value="{StaticResource BackgroundBrush}"/>
 		<Setter Property="FontSize" Value="24"/>
      </Style>
+     <Image x:Key="Res1" Source="Pictures\cogwheel-3.png"/>
      </Application.Resources>
 </Application>
